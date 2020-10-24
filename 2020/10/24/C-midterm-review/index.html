@@ -20,15 +20,15 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog,BestBonBai">
     
     <meta name="description" content="">
-    <meta name="description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate oth">
+    <meta name="description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C  Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate ot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ midterm review">
 <meta property="og:url" content="http://bestbonbai.github.io/2020/10/24/C-midterm-review/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate oth">
+<meta property="og:description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C  Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate ot">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-24T16:38:16.000Z">
-<meta property="article:modified_time" content="2020-10-24T21:39:29.748Z">
+<meta property="article:modified_time" content="2020-10-24T21:45:39.745Z">
 <meta property="article:author" content="BestBonBai">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -416,16 +416,20 @@ height:50vh;
     <article class="article-entry">
         <h2 id="C-midterm-review"><a href="#C-midterm-review" class="headerlink" title="C++ midterm review"></a>C++ midterm review</h2><hr>
 <h3 id="Slide-Set-1"><a href="#Slide-Set-1" class="headerlink" title="Slide Set 1:"></a>Slide Set 1:</h3><h4 id="1-program-structure"><a href="#1-program-structure" class="headerlink" title="1. program structure"></a>1. program structure</h4><ul>
-<li>C++ is a superset of C<ul>
+<li><p>C++ is a superset of C</p>
+<ul>
 <li>Main function is the program driver</li>
 <li>Free functions</li>
 <li>Data structures</li>
 <li>A C program is valid C++ program</li>
 </ul>
 </li>
-<li>Classes encapsulate other functions: <strong>Object-oriented</strong></li>
-<li>The main function is a free function, not a class member</li>
-<li>Only simplistic programs are self-contained into one file<ul>
+<li><p>Classes encapsulate other functions: <strong>Object-oriented</strong></p>
+</li>
+<li><p>The main function is a <strong>free function</strong>, not a class member</p>
+</li>
+<li><p>Only simplistic programs are self-contained into one file</p>
+<ul>
 <li>C++ is a language that specifies programming structures and includes only<br>basic data structures and operators</li>
 <li>Most programs require the use of libraries</li>
 <li>Complier will compile the library’s code and the program’s code, then<br>the linker will link them</li>
@@ -433,7 +437,8 @@ height:50vh;
 <li>This leads to what is called <code>physical design</code>, i.e. decisions as to what entities are grouped within/across files.</li>
 </ul>
 </li>
-<li><strong>multiple files programs</strong> Aside from having to use libraries, large programs need to be split into different files for various reasons:<ul>
+<li><p><strong>multiple files programs</strong> Aside from having to use libraries, large programs need to be split into different files for various reasons:</p>
+<ul>
 <li><strong>Speed up compilation:</strong> Upon changes to the code, the compiler will recompile only the files that had a change.</li>
 <li><strong>Increase organization, decrease browsing time:</strong> Physically splitting your code along logical lines will make it easier to browse through the code to locate classes, functions, etc.</li>
 <li><strong>Facilitate code reuse:</strong> Modular physical design allows for grouping related entities and separating them from less related ones. Each group can then be logically designed to be reusable across different projects. Reused code can be fixed, fixing all projects that use it.</li>
@@ -557,12 +562,16 @@ height:50vh;
 <li><p>This is one reason why the use of using <code>NS::name</code> directive is <strong>advocated</strong> over using <code>namespace NS</code></p>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS1;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS2;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS1::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS2::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>global namespace</strong></p>
-<pre><code>* All code goes in some namespace
-* Unless specified, code belongs to the global namespace
-    * No need for **using** directive
-    * Global namespace always available
-    * But there is no way to “turn it off”
-    * Thus, global namespace is prone to **name clashes**</code></pre>
+<ul>
+<li>All code goes in some namespace</li>
+<li>Unless specified, code belongs to the global namespace<ul>
+<li>No need for <strong>using</strong> directive</li>
+<li>Global namespace always available</li>
+<li>But there is no way to “turn it off”</li>
+<li>Thus, global namespace is prone to <strong>name clashes</strong></li>
+</ul>
+</li>
+</ul>
 </li>
 <li><p>the same namespace needs to be declared in both <code>.h</code> and <code>.cpp</code> files</p>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In the header file         </span></span><br><span class="line">  <span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//In the implementation file (definitions):</span></span><br><span class="line"><span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;     </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello from namespace Space1.\n&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -583,7 +592,7 @@ height:50vh;
             <p>Author：<a href="http://BestBonBai.github.io">BestBonBai</a>
             <p>original link：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">http://bestbonbai.github.io/2020/10/24/C-midterm-review/</a>
             <p>publish date：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">October 24th 2020, 12:38:16 pm</a>
-            <p>updated date：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">October 24th 2020, 5:39:29 pm</a>
+            <p>updated date：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">October 24th 2020, 5:45:39 pm</a>
             <p>copyright：The article is <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">free share licence</a></p>
         </div>
     
