@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="BestBonBai">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="BestBonBai">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog,BestBonBai">
+    
+    <meta name="description" content="">
+    <meta name="description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate oth">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ midterm review">
+<meta property="og:url" content="http://bestbonbai.github.io/2020/10/24/C-midterm-review/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="C++ midterm review Slide Set 1:1. program structure C++ is a superset of C Main function is the program driver Free functions Data structures A C program is valid C++ program   Classes encapsulate oth">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-24T16:38:16.000Z">
+<meta property="article:modified_time" content="2020-10-24T21:39:29.748Z">
+<meta property="article:author" content="BestBonBai">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title>C++ midterm review · BestBonBai&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href= "/assets/favicon.ico" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >BestBonBai&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">C++ midterm review</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>BestBonBai's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            C++ midterm review
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "C++">C++</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.2k</span>Reading time: <span class="post-count reading-time">7 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/10/24</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="C-midterm-review"><a href="#C-midterm-review" class="headerlink" title="C++ midterm review"></a>C++ midterm review</h2><hr>
+<h3 id="Slide-Set-1"><a href="#Slide-Set-1" class="headerlink" title="Slide Set 1:"></a>Slide Set 1:</h3><h4 id="1-program-structure"><a href="#1-program-structure" class="headerlink" title="1. program structure"></a>1. program structure</h4><ul>
+<li>C++ is a superset of C<ul>
+<li>Main function is the program driver</li>
+<li>Free functions</li>
+<li>Data structures</li>
+<li>A C program is valid C++ program</li>
+</ul>
+</li>
+<li>Classes encapsulate other functions: <strong>Object-oriented</strong></li>
+<li>The main function is a free function, not a class member</li>
+<li>Only simplistic programs are self-contained into one file<ul>
+<li>C++ is a language that specifies programming structures and includes only<br>basic data structures and operators</li>
+<li>Most programs require the use of libraries</li>
+<li>Complier will compile the library’s code and the program’s code, then<br>the linker will link them</li>
+<li>Unlike Java, a single C++ file can contain many classes/functions/data<br>structures.</li>
+<li>This leads to what is called <code>physical design</code>, i.e. decisions as to what entities are grouped within/across files.</li>
+</ul>
+</li>
+<li><strong>multiple files programs</strong> Aside from having to use libraries, large programs need to be split into different files for various reasons:<ul>
+<li><strong>Speed up compilation:</strong> Upon changes to the code, the compiler will recompile only the files that had a change.</li>
+<li><strong>Increase organization, decrease browsing time:</strong> Physically splitting your code along logical lines will make it easier to browse through the code to locate classes, functions, etc.</li>
+<li><strong>Facilitate code reuse:</strong> Modular physical design allows for grouping related entities and separating them from less related ones. Each group can then be logically designed to be reusable across different projects. Reused code can be fixed, fixing all projects that use it.</li>
+<li><strong>Split coding responsibilities among programmers:</strong> For really large projects, several programmers are involved. The larger are the program files, the more likely it is that several programmers are changing the same file simultaneously.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-compilation-unit"><a href="#2-compilation-unit" class="headerlink" title="2. compilation unit"></a>2. compilation unit</h4><ul>
+<li><p>In C++, a compilation unit is a file (<code>.cpp</code>)</p>
+</li>
+<li><p>A file may contain several functions, data structures, or classes (unlike Java)</p>
+</li>
+<li><p>Each <strong>compilation unit</strong> is compiled individually into an object file</p>
+</li>
+<li><p>The object files typically have cross-references to other object files</p>
+</li>
+<li><p>The linker then attempts to resolve cross-references between the object files to form the unique executable file.</p>
+</li>
+<li><p>Each component is a group of <code>highly cohesive</code> and <code>highly coupled</code> elements</p>
+</li>
+<li><p><strong>Cohesion</strong>: The degree to which the elements of a module belong together in the achievement of a common goal.</p>
+</li>
+<li><p>Cohesion is increased if:</p>
+<ul>
+<li>The functionalities embedded in a module have much in common.</li>
+<li>The composing elements carry out a small number of related activities, by avoiding coarsely grained and/or unrelated sets of data.</li>
+</ul>
+</li>
+<li><p>Advantages of <code>high cohesion</code>:</p>
+<ul>
+<li>Increased <code>understandability</code> of modules (simpler, fewer operations).</li>
+<li>Increased <code>maintainability</code>, because changes in one module require fewer changes in other modules.</li>
+<li>Increased <code>reusability</code>, because application developers will find the component they need more easily among the cohesive set of operations provided by the module.</li>
+</ul>
+</li>
+<li><p><strong>Coupling</strong>: the degree to which an element relies on other elements for its operation</p>
+<ul>
+<li>Coupling is not a desired quality, but is a side-effect of defining different elements to carry a common task</li>
+<li>Much related to cohesion: <strong>good modules</strong> exhibit <code>high cohesion</code> and <code>high coupling</code></li>
+<li>Coupling between modules is what really needs to be avoided</li>
+</ul>
+</li>
+<li><p>Disadvantages of high coupling:</p>
+<ul>
+<li>A change in one module forces a ripple effect of changes in other modules</li>
+<li>Assembly of modules requires more effort due to the increased inter-module<br>dependency</li>
+<li>A module might be harder to reuse and/or test because dependent modules must be included</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-header-cpp-files"><a href="#3-header-cpp-files" class="headerlink" title="3. header/cpp files"></a>3. header/cpp files</h4><ul>
+<li><p><strong>header File</strong> (<code>.h</code> file)</p>
+<ul>
+<li>Contains class declaration with <code>free functions</code> and <code>operators declarations</code></li>
+<li>Useful to programmers, as it is overview of a component that omits<br>implementation details</li>
+</ul>
+</li>
+<li><p><strong>Source File</strong> (<code>.cpp</code> file)</p>
+<ul>
+<li>Contains free/member function definitions</li>
+<li>The <code>.cpp</code> file is a compilation unit  </li>
+</ul>
+</li>
+<li><p><strong>General rules</strong>:</p>
+<ul>
+<li>There should be a <strong>one-to-one</strong> relationship between a given <code>.ccp</code> file and a corresponding <code>.h</code> file, and they should have the <strong>same name</strong>.</li>
+<li>The <code>.cpp</code> file “<code>#includes</code>” its corresponding <code>.h</code> file.</li>
+<li>A <code>.cpp</code> file should <strong>never</strong> be “<code>#included</code>”, as it effectively merges two compilation units together.</li>
+</ul>
+</li>
+<li><p><code>cpp</code> files contain the executable code, i.e. function definitions</p>
+<ul>
+<li>Function definitions:<ul>
+<li><strong>Functions</strong> - <code>main()</code> function, free functions, member functions</li>
+<li><strong>Operators</strong> - free operators, member operators</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-includes"><a href="#4-includes" class="headerlink" title="4. includes"></a>4. includes</h4><ul>
+<li>Two types to use <code>#include</code><ul>
+<li><code>#include &quot;mymodule.h&quot;</code><ul>
+<li>Quotes indicate a <strong>user-defined</strong> module</li>
+<li>The compiler will find it in your project directories</li>
+</ul>
+</li>
+<li><code>#include &lt;mymodule.h&gt;</code><ul>
+<li><code>&lt; &gt;</code> indicate predefined <strong>library</strong> <code>header</code> file</li>
+<li>The compiler will find it in the library directories</li>
+<li>Using different search paths</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-redundant-includes"><a href="#5-redundant-includes" class="headerlink" title="5. redundant includes"></a>5. redundant includes</h4><ul>
+<li><p>Use <strong>preprocessor</strong> directives</p>
+<ul>
+<li>Instructs the compiler to read a header file <strong>only once</strong></li>
+</ul>
+</li>
+<li><p>two ways for <code>fname.h</code> :</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> FNAME_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FNAME_H</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">//Content of header file</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>#pragma once</code>  </li>
+</ul>
+</li>
+</ul>
+<h4 id="6-namespaces"><a href="#6-namespaces" class="headerlink" title="6. namespaces"></a>6. namespaces</h4><ul>
+<li><p><strong>Namespace</strong>: Collection of name definitions inside of a program, potentially across different files</p>
+</li>
+<li><p>For example, namespace “std” is common in libraries. Has all standard library definitions we need</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Includes <u>entire</u> standard library of name definitions<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br></pre></td></tr></table></figure></li>
+<li>Can specify just the objects we want</li>
+<li>Can be more efficient, as it avoids including things we don’t use</li>
+</ul>
+</li>
+<li><p>This is one reason why the use of using <code>NS::name</code> directive is <strong>advocated</strong> over using <code>namespace NS</code></p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS1;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS2;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS1::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS2::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>global namespace</strong></p>
+<pre><code>* All code goes in some namespace
+* Unless specified, code belongs to the global namespace
+    * No need for **using** directive
+    * Global namespace always available
+    * But there is no way to “turn it off”
+    * Thus, global namespace is prone to **name clashes**</code></pre>
+</li>
+<li><p>the same namespace needs to be declared in both <code>.h</code> and <code>.cpp</code> files</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In the header file         </span></span><br><span class="line">  <span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//In the implementation file (definitions):</span></span><br><span class="line"><span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;     </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello from namespace Space1.\n&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>global vs. unnamed namespace</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i = <span class="number">4</span>; <span class="comment">// this is local</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>; <span class="comment">// this is global</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// ERROR, i is ambiguous</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h3 id="Slide-Set-2"><a href="#Slide-Set-2" class="headerlink" title="Slide Set 2:"></a>Slide Set 2:</h3><h4 id="1-structs-and-classes-as-data-types"><a href="#1-structs-and-classes-as-data-types" class="headerlink" title="1. structs and classes as data types"></a>1. structs and classes as data types</h4><h4 id="2-variable-initialization"><a href="#2-variable-initialization" class="headerlink" title="2. variable initialization"></a>2. variable initialization</h4><h4 id="3-implicit-explicit-type-coercion"><a href="#3-implicit-explicit-type-coercion" class="headerlink" title="3. implicit/explicit type coercion"></a>3. implicit/explicit type coercion</h4><h5 id="static-cast-dynamic-cast"><a href="#static-cast-dynamic-cast" class="headerlink" title="* static_cast, dynamic_cast"></a>* static_cast, dynamic_cast</h5><h5 id="upcasting-downcasting"><a href="#upcasting-downcasting" class="headerlink" title="* upcasting/downcasting"></a>* upcasting/downcasting</h5><h4 id="4-conversion-sequences"><a href="#4-conversion-sequences" class="headerlink" title="4. conversion sequences"></a>4. conversion sequences</h4><h4 id="5-pointers"><a href="#5-pointers" class="headerlink" title="5. pointers"></a>5. pointers</h4><h4 id="6-pointer-artithmetic"><a href="#6-pointer-artithmetic" class="headerlink" title="6. pointer artithmetic"></a>6. pointer artithmetic</h4><h4 id="7-pointers-and-const"><a href="#7-pointers-and-const" class="headerlink" title="7. pointers and const"></a>7. pointers and const</h4><h4 id="8-void-wild-dangling-null-pointers"><a href="#8-void-wild-dangling-null-pointers" class="headerlink" title="8.  void/wild/dangling/null pointers"></a>8.  void/wild/dangling/null pointers</h4><h5 id="stack-heap-new-delete"><a href="#stack-heap-new-delete" class="headerlink" title="* stack/heap/new/delete"></a>* stack/heap/new/delete</h5><h5 id="arithmetics"><a href="#arithmetics" class="headerlink" title="* arithmetics"></a>* arithmetics</h5><h4 id="9-references"><a href="#9-references" class="headerlink" title="9. references"></a>9. references</h4><h4 id="10-smart-pointers-NO"><a href="#10-smart-pointers-NO" class="headerlink" title="10. smart pointers (NO)"></a>10. <del>smart pointers</del> (<strong>NO</strong>)</h4><h4 id="11-parameter-passing"><a href="#11-parameter-passing" class="headerlink" title="11. parameter passing"></a>11. parameter passing</h4><h4 id="12-strings"><a href="#12-strings" class="headerlink" title="12. strings"></a>12. strings</h4><hr>
+<h3 id="Slide-Set-3"><a href="#Slide-Set-3" class="headerlink" title="Slide Set 3:"></a>Slide Set 3:</h3><h4 id="1-input-output-streams"><a href="#1-input-output-streams" class="headerlink" title="1. input/output streams"></a>1. input/output streams</h4><h4 id="2-cin-cout"><a href="#2-cin-cout" class="headerlink" title="2. cin/cout"></a>2. cin/cout</h4><h4 id="3-files-stream-declarations-open-close-usage"><a href="#3-files-stream-declarations-open-close-usage" class="headerlink" title="3. files stream declarations, open/close, usage"></a>3. files stream declarations, open/close, usage</h4><h4 id="4-lt-lt-and-gt-gt-operator-overloading"><a href="#4-lt-lt-and-gt-gt-operator-overloading" class="headerlink" title="4. &lt;&lt; and &gt;&gt; operator overloading"></a>4. &lt;&lt; and &gt;&gt; operator overloading</h4><h4 id="5-MFC-serialization-NO"><a href="#5-MFC-serialization-NO" class="headerlink" title="5. MFC serialization (NO)"></a>5. <del>MFC serialization</del> (<strong>NO</strong>)</h4><hr>
+<h3 id="Slide-Set-4"><a href="#Slide-Set-4" class="headerlink" title="Slide Set 4:"></a>Slide Set 4:</h3><h4 id="1-classes-vs-structs"><a href="#1-classes-vs-structs" class="headerlink" title="1. classes vs. structs"></a>1. classes vs. structs</h4><h4 id="2-struct-usage"><a href="#2-struct-usage" class="headerlink" title="2. struct usage"></a>2. struct usage</h4><h4 id="3-class-declarations-h-and-cpp-files"><a href="#3-class-declarations-h-and-cpp-files" class="headerlink" title="3. class declarations (.h and .cpp files)"></a>3. class declarations (.h and .cpp files)</h4><h4 id="4-declaring-using-objects"><a href="#4-declaring-using-objects" class="headerlink" title="4. declaring/using objects"></a>4. declaring/using objects</h4><h5 id="with-or-without-pointers"><a href="#with-or-without-pointers" class="headerlink" title="* with or without pointers"></a>* with or without pointers</h5><h4 id="5-inline-functions-methods"><a href="#5-inline-functions-methods" class="headerlink" title="5. inline functions/methods"></a>5. inline functions/methods</h4><h4 id="6-const-specifier"><a href="#6-const-specifier" class="headerlink" title="6. const specifier"></a>6. const specifier</h4><h4 id="7-static-specifier"><a href="#7-static-specifier" class="headerlink" title="7. static specifier"></a>7. static specifier</h4><h4 id="8-friends"><a href="#8-friends" class="headerlink" title="8. friends"></a>8. friends</h4><h4 id="9-constructors-destructors"><a href="#9-constructors-destructors" class="headerlink" title="9. constructors/destructors"></a>9. constructors/destructors</h4><h5 id="declaration-implementation"><a href="#declaration-implementation" class="headerlink" title="* declaration/implementation"></a>* declaration/implementation</h5><h5 id="initialization-list"><a href="#initialization-list" class="headerlink" title="* initialization list"></a>* initialization list</h5><h5 id="implicit-explicit-constructor-calls"><a href="#implicit-explicit-constructor-calls" class="headerlink" title="* implicit/explicit constructor calls"></a>* implicit/explicit constructor calls</h5><h5 id="call-chain"><a href="#call-chain" class="headerlink" title="* call chain"></a>* call chain</h5><h4 id="10-inheritance"><a href="#10-inheritance" class="headerlink" title="10. inheritance"></a>10. inheritance</h4><h5 id="overriding-overloading"><a href="#overriding-overloading" class="headerlink" title="* overriding/overloading"></a>* overriding/overloading</h5><h5 id="vs-constructor-destructor-implementation"><a href="#vs-constructor-destructor-implementation" class="headerlink" title="* vs. constructor/destructor implementation"></a>* vs. constructor/destructor implementation</h5><h5 id="assignment-operator"><a href="#assignment-operator" class="headerlink" title="* assignment operator"></a>* assignment operator</h5><h5 id="copy-constructor"><a href="#copy-constructor" class="headerlink" title="* copy constructor"></a>* copy constructor</h5><h5 id="shallow-deep-copy"><a href="#shallow-deep-copy" class="headerlink" title="* shallow/deep copy"></a>* shallow/deep copy</h5><h4 id="11-multiple-inheritance-Yes"><a href="#11-multiple-inheritance-Yes" class="headerlink" title="11. multiple inheritance (Yes)"></a>11. multiple inheritance (<strong>Yes</strong>)</h4><h4 id="12-virtual-inheritance-Yes"><a href="#12-virtual-inheritance-Yes" class="headerlink" title="12. virtual inheritance (Yes)"></a>12. virtual inheritance (<strong>Yes</strong>)</h4><h4 id="13-diamond-problem-Yes"><a href="#13-diamond-problem-Yes" class="headerlink" title="13. diamond problem (Yes)"></a>13. diamond problem (<strong>Yes</strong>)</h4><hr>
+<h3 id="Slide-Set-5"><a href="#Slide-Set-5" class="headerlink" title="Slide Set 5:"></a>Slide Set 5:</h3><h4 id="1-statically-allocated-arrays-one-YES-multidimensional-NO"><a href="#1-statically-allocated-arrays-one-YES-multidimensional-NO" class="headerlink" title="1. statically allocated arrays (one(YES) / multidimensional(NO)"></a>1. statically allocated arrays (one(<strong>YES</strong>) / <del>multidimensional</del>(<strong>NO</strong>)</h4><h5 id="declaration-usage"><a href="#declaration-usage" class="headerlink" title="* declaration, usage"></a>* declaration, usage</h5><h5 id="memory-allocation-model"><a href="#memory-allocation-model" class="headerlink" title="* memory allocation model"></a>* memory allocation model</h5><h5 id="passing-as-parameters"><a href="#passing-as-parameters" class="headerlink" title="* passing as parameters"></a>* passing as parameters</h5><h4 id="2-dynamically-allocated-arrays-one-dimensional-YES-multidimensional-NO"><a href="#2-dynamically-allocated-arrays-one-dimensional-YES-multidimensional-NO" class="headerlink" title="2. dynamically allocated arrays (one-dimensional (YES)) (multidimensional - NO)"></a>2. dynamically allocated arrays (one-dimensional (<strong>YES</strong>)) (<del>multidimensional</del> - <strong>NO</strong>)</h4><h5 id="declaration-usage-1"><a href="#declaration-usage-1" class="headerlink" title="* declaration, usage"></a>* declaration, usage</h5><h5 id="memory-allocation-model-1"><a href="#memory-allocation-model-1" class="headerlink" title="* memory allocation model"></a>* memory allocation model</h5><h5 id="passing-as-parameters-1"><a href="#passing-as-parameters-1" class="headerlink" title="* passing as parameters"></a>* passing as parameters</h5><h4 id="3-array-decay-into-a-pointer-NO"><a href="#3-array-decay-into-a-pointer-NO" class="headerlink" title="3. array decay into a pointer(NO)"></a>3. <del>array decay into a pointer</del>(<strong>NO</strong>)</h4><h4 id="4-static-array-classes-NO"><a href="#4-static-array-classes-NO" class="headerlink" title="4. static array classes (NO)"></a>4. <del>static array classes</del> (<strong>NO</strong>)</h4><h4 id="5-STL-containers-NO"><a href="#5-STL-containers-NO" class="headerlink" title="5. STL containers (NO)"></a>5. <del>STL containers</del> (<strong>NO</strong>)</h4><h5 id="declaration-usage-NO"><a href="#declaration-usage-NO" class="headerlink" title="* declaration, usage (NO)"></a>* <del>declaration, usage</del> (<strong>NO</strong>)</h5><h5 id="iterators-NO"><a href="#iterators-NO" class="headerlink" title="* iterators (NO)"></a>* <del>iterators</del> (<strong>NO</strong>)</h5>
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="http://BestBonBai.github.io">BestBonBai</a>
+            <p>original link：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">http://bestbonbai.github.io/2020/10/24/C-midterm-review/</a>
+            <p>publish date：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">October 24th 2020, 12:38:16 pm</a>
+            <p>updated date：<a href="http://bestbonbai.github.io/2020/10/24/C-midterm-review/">October 24th 2020, 5:39:29 pm</a>
+            <p>copyright：The article is <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">free share licence</a></p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/10/22/Database-SQL-Q-A-1/" title= "Database SQL Q&A 1">
+                    <div class="prevTitle">Database SQL Q&A 1</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:jsbaihualin@hotmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/BestBonBai" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="//" class="iconfont-archer rss" target="_blank" title=rss></a>
+            
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-midterm-review"><span class="toc-number">1.</span> <span class="toc-text">C++ midterm review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Slide-Set-1"><span class="toc-number">1.1.</span> <span class="toc-text">Slide Set 1:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-program-structure"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. program structure</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-compilation-unit"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. compilation unit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-header-cpp-files"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. header&#x2F;cpp files</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-includes"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. includes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-redundant-includes"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. redundant includes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-namespaces"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. namespaces</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slide-Set-2"><span class="toc-number">1.2.</span> <span class="toc-text">Slide Set 2:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-structs-and-classes-as-data-types"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. structs and classes as data types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-variable-initialization"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. variable initialization</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-implicit-explicit-type-coercion"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. implicit&#x2F;explicit type coercion</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#static-cast-dynamic-cast"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">* static_cast, dynamic_cast</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#upcasting-downcasting"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">* upcasting&#x2F;downcasting</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-conversion-sequences"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. conversion sequences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-pointers"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. pointers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-pointer-artithmetic"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. pointer artithmetic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-pointers-and-const"><span class="toc-number">1.2.7.</span> <span class="toc-text">7. pointers and const</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-void-wild-dangling-null-pointers"><span class="toc-number">1.2.8.</span> <span class="toc-text">8.  void&#x2F;wild&#x2F;dangling&#x2F;null pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#stack-heap-new-delete"><span class="toc-number">1.2.8.1.</span> <span class="toc-text">* stack&#x2F;heap&#x2F;new&#x2F;delete</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#arithmetics"><span class="toc-number">1.2.8.2.</span> <span class="toc-text">* arithmetics</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-references"><span class="toc-number">1.2.9.</span> <span class="toc-text">9. references</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-smart-pointers-NO"><span class="toc-number">1.2.10.</span> <span class="toc-text">10. smart pointers (NO)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-parameter-passing"><span class="toc-number">1.2.11.</span> <span class="toc-text">11. parameter passing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-strings"><span class="toc-number">1.2.12.</span> <span class="toc-text">12. strings</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slide-Set-3"><span class="toc-number">1.3.</span> <span class="toc-text">Slide Set 3:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-input-output-streams"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. input&#x2F;output streams</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-cin-cout"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. cin&#x2F;cout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-files-stream-declarations-open-close-usage"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. files stream declarations, open&#x2F;close, usage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-lt-lt-and-gt-gt-operator-overloading"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. &lt;&lt; and &gt;&gt; operator overloading</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-MFC-serialization-NO"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. MFC serialization (NO)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slide-Set-4"><span class="toc-number">1.4.</span> <span class="toc-text">Slide Set 4:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-classes-vs-structs"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. classes vs. structs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-struct-usage"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. struct usage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-class-declarations-h-and-cpp-files"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. class declarations (.h and .cpp files)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-declaring-using-objects"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. declaring&#x2F;using objects</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#with-or-without-pointers"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">* with or without pointers</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-inline-functions-methods"><span class="toc-number">1.4.5.</span> <span class="toc-text">5. inline functions&#x2F;methods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-const-specifier"><span class="toc-number">1.4.6.</span> <span class="toc-text">6. const specifier</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-static-specifier"><span class="toc-number">1.4.7.</span> <span class="toc-text">7. static specifier</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-friends"><span class="toc-number">1.4.8.</span> <span class="toc-text">8. friends</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-constructors-destructors"><span class="toc-number">1.4.9.</span> <span class="toc-text">9. constructors&#x2F;destructors</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#declaration-implementation"><span class="toc-number">1.4.9.1.</span> <span class="toc-text">* declaration&#x2F;implementation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#initialization-list"><span class="toc-number">1.4.9.2.</span> <span class="toc-text">* initialization list</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#implicit-explicit-constructor-calls"><span class="toc-number">1.4.9.3.</span> <span class="toc-text">* implicit&#x2F;explicit constructor calls</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#call-chain"><span class="toc-number">1.4.9.4.</span> <span class="toc-text">* call chain</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-inheritance"><span class="toc-number">1.4.10.</span> <span class="toc-text">10. inheritance</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#overriding-overloading"><span class="toc-number">1.4.10.1.</span> <span class="toc-text">* overriding&#x2F;overloading</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#vs-constructor-destructor-implementation"><span class="toc-number">1.4.10.2.</span> <span class="toc-text">* vs. constructor&#x2F;destructor implementation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#assignment-operator"><span class="toc-number">1.4.10.3.</span> <span class="toc-text">* assignment operator</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#copy-constructor"><span class="toc-number">1.4.10.4.</span> <span class="toc-text">* copy constructor</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#shallow-deep-copy"><span class="toc-number">1.4.10.5.</span> <span class="toc-text">* shallow&#x2F;deep copy</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-multiple-inheritance-Yes"><span class="toc-number">1.4.11.</span> <span class="toc-text">11. multiple inheritance (Yes)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-virtual-inheritance-Yes"><span class="toc-number">1.4.12.</span> <span class="toc-text">12. virtual inheritance (Yes)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-diamond-problem-Yes"><span class="toc-number">1.4.13.</span> <span class="toc-text">13. diamond problem (Yes)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slide-Set-5"><span class="toc-number">1.5.</span> <span class="toc-text">Slide Set 5:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-statically-allocated-arrays-one-YES-multidimensional-NO"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. statically allocated arrays (one(YES) &#x2F; multidimensional(NO)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#declaration-usage"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">* declaration, usage</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#memory-allocation-model"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">* memory allocation model</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#passing-as-parameters"><span class="toc-number">1.5.1.3.</span> <span class="toc-text">* passing as parameters</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-dynamically-allocated-arrays-one-dimensional-YES-multidimensional-NO"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. dynamically allocated arrays (one-dimensional (YES)) (multidimensional - NO)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#declaration-usage-1"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">* declaration, usage</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#memory-allocation-model-1"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">* memory allocation model</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#passing-as-parameters-1"><span class="toc-number">1.5.2.3.</span> <span class="toc-text">* passing as parameters</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-array-decay-into-a-pointer-NO"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. array decay into a pointer(NO)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-static-array-classes-NO"><span class="toc-number">1.5.4.</span> <span class="toc-text">4. static array classes (NO)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-STL-containers-NO"><span class="toc-number">1.5.5.</span> <span class="toc-text">5. STL containers (NO)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#declaration-usage-NO"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">* declaration, usage (NO)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#iterators-NO"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">* iterators (NO)</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 4
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/24</span><a class="archive-post-title" href= "/2020/10/24/C-midterm-review/" >C++ midterm review</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/22</span><a class="archive-post-title" href= "/2020/10/22/Database-SQL-Q-A-1/" >Database SQL Q&A 1</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/21</span><a class="archive-post-title" href= "/2020/10/21/Hexo-Theme/" >Hexo-Theme</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/21</span><a class="archive-post-title" href= "/2020/10/21/How-to-create-Hexo/" >How to create Hexo</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
+    
+        <span class="sidebar-tag-name" data-tags="Database, SQL"><span class="iconfont-archer">&#xe606;</span>Database, SQL</span>
+    
+        <span class="sidebar-tag-name" data-tags="Hexo-Theme"><span class="iconfont-archer">&#xe606;</span>Hexo-Theme</span>
+    
+        <span class="sidebar-tag-name" data-tags="Hexo"><span class="iconfont-archer">&#xe606;</span>Hexo</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "BestBonBai"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":190,"height":280},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
+
+
