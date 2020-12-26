@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://bestbonbai.github.io/about/index.html</loc>
+    <loc>https://bestbonbai.github.io/about/index.html</loc>
     
     <lastmod>2020-12-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/2020/10/25/Markdown-notes/</loc>
+    <loc>https://bestbonbai.github.io/2020/10/25/Markdown-notes/</loc>
     
     <lastmod>2020-12-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/2020/10/24/C-midterm-review/</loc>
+    <loc>https://bestbonbai.github.io/2020/10/24/C-midterm-review/</loc>
     
     <lastmod>2020-11-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/2020/10/22/Database-SQL-Q-A-1/</loc>
+    <loc>https://bestbonbai.github.io/2020/10/22/Database-SQL-Q-A-1/</loc>
     
     <lastmod>2020-11-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/2020/10/21/Hexo-Theme/</loc>
+    <loc>https://bestbonbai.github.io/2020/10/21/Hexo-Theme/</loc>
     
     <lastmod>2020-10-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/2020/10/21/How-to-create-Hexo/</loc>
+    <loc>https://bestbonbai.github.io/2020/10/21/How-to-create-Hexo/</loc>
     
     <lastmod>2020-10-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/404/index.html</loc>
+    <loc>https://bestbonbai.github.io/404/index.html</loc>
     
     <lastmod>2020-10-21</lastmod>
     
@@ -52,7 +52,7 @@
   
 
   <url>
-    <loc>http://bestbonbai.github.io/</loc>
+    <loc>https://bestbonbai.github.io/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -60,35 +60,35 @@
 
   
   <url>
-    <loc>http://bestbonbai.github.io/tags/Database-SQL/</loc>
+    <loc>https://bestbonbai.github.io/tags/Database-SQL/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/tags/Hexo-Theme/</loc>
+    <loc>https://bestbonbai.github.io/tags/Hexo-Theme/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/tags/Hexo/</loc>
+    <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/tags/Markdown/</loc>
+    <loc>https://bestbonbai.github.io/tags/Hexo/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://bestbonbai.github.io/tags/C/</loc>
+    <loc>https://bestbonbai.github.io/tags/C/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
