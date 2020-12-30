@@ -477,27 +477,29 @@ height:50vh;
     <!-- 评论插件 -->
     <!-- LiveRe City install code -->
 
-    <div id="lv-container" data-id="city" data-uid= MTAyMC81MjI2MC8yODczOQ==>
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>Please activate JavaScript for write a comment in LiveRe</noscript>
-    </div>
-
 <!-- completed City install code -->
 
     
     
     <!-- gitalk评论 -->
 
+    <div id="comment-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: '351d88f9c2ba76a62b8e',
+            clientSecret: '0393ece8e2726639cd3aba30c379297c758ad525',
+            id: '1603605990000',
+            repo: 'BestBonBai.github.io',
+            owner: 'BestBonBai',
+            admin: ["BestBonBai"],
+            createIssueManually: true,
+            distractionFreeMode: false
+        })
+        gitalk.render('comment-container')
+    </script>
+    
     <!-- utteranc评论 -->
 
     <!-- partial('_partial/comment/changyan') -->
