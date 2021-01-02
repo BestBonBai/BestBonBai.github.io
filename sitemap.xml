@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bestbonbai.github.io/2021/01/02/Python-Spider-to-Crawl-PangziTV/</loc>
+    
+    <lastmod>2021-01-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/2021/01/02/my_info_file/</loc>
+    
+    <lastmod>2021-01-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.github.io/2020/10/22/Database-SQL-Q-A-1/</loc>
     
     <lastmod>2020-12-27</lastmod>
@@ -60,7 +74,7 @@
 
   <url>
     <loc>https://bestbonbai.github.io/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,56 +82,77 @@
   
   <url>
     <loc>https://bestbonbai.github.io/tags/Hexo-Theme/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/Hexo/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/C/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/Database/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/SQL/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/git/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/tags/cheatsheet/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/tags/Python/</loc>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/tags/Spider/</loc>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/tags/Crawl/</loc>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,14 +161,35 @@
   
   <url>
     <loc>https://bestbonbai.github.io/categories/notes/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bestbonbai.github.io/categories/notes/cheatsheet/</loc>
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/Python/</loc>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/Python/Spider/</loc>
+    <lastmod>2021-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/Python/Spider/Funny/</loc>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
