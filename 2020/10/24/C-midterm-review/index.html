@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>C++ midterm review - BestBonBai</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="BestBonBai"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="BestBonBai"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="COMP 345 C++ midterm review"><meta property="og:type" content="blog"><meta property="og:title" content="BestBonBai&#039;s Studio"><meta property="og:url" content="https://bestbonbai.github.io/"><meta property="og:site_name" content="BestBonBai&#039;s Studio"><meta property="og:description" content="COMP 345 C++ midterm review"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://bestbonbai.github.io/img/linglong.jpg"><meta property="article:published_time" content="2020-10-24T16:38:16.000Z"><meta property="article:modified_time" content="2021-01-08T22:36:39.489Z"><meta property="article:author" content="BestBonBai"><meta property="article:tag" content="C++"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/linglong.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bestbonbai.github.io/2020/10/24/C-midterm-review/"},"headline":"BestBonBai","image":["https://bestbonbai.github.io/img/og_image.png"],"datePublished":"2020-10-24T16:38:16.000Z","dateModified":"2021-01-08T22:36:39.489Z","author":{"@type":"Person","name":"BestBonBai"},"description":"COMP 345 C++ midterm review"}</script><link rel="canonical" href="https://bestbonbai.github.io/2020/10/24/C-midterm-review/"><link rel="icon" href="/img/favicon.ico"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-Q848JQW8F1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-Q848JQW8F1');</script><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.2.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/bai-logo2.png" alt="BestBonBai" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a><a class="navbar-item" href="/404Charity">404Charity</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/BestBonBai"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-10-24  <a class="commentCountImg" href="/2020/10/24/C-midterm-review/#comment-container"><span class="display-none-class">6e19acf5a6b7911a8da014282bbf2802</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="6e19acf5a6b7911a8da014282bbf2802">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>30 m  <i class="fas fa-pencil-alt"> </i>4.5 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">C++ midterm review</h1><div class="content"><blockquote>
+<p>COMP 345 C++ midterm review</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="C-midterm-review"><a href="#C-midterm-review" class="headerlink" title="C++ midterm review"></a>C++ midterm review</h2><hr>
+<h3 id="Slide-Set-1"><a href="#Slide-Set-1" class="headerlink" title="Slide Set 1:"></a>Slide Set 1:</h3><h4 id="1-program-structure"><a href="#1-program-structure" class="headerlink" title="1. program structure"></a>1. program structure</h4><ul>
+<li><p>C++ is a superset of C</p>
+<ul>
+<li>Main function is the program driver</li>
+<li>Free functions</li>
+<li>Data structures</li>
+<li>A C program is valid C++ program</li>
+</ul>
+</li>
+<li><p>Classes encapsulate other functions: <strong>Object-oriented</strong></p>
+</li>
+<li><p>The main function is a <strong>free function</strong>, not a class member</p>
+</li>
+<li><p>Only simplistic programs are self-contained into one file</p>
+<ul>
+<li>C++ is a language that specifies programming structures and includes only<br>basic data structures and operators</li>
+<li>Most programs require the use of libraries</li>
+<li>Complier will compile the library’s code and the program’s code, then<br>the linker will link them</li>
+<li>Unlike Java, a single C++ file can contain many classes/functions/data<br>structures.</li>
+<li>This leads to what is called <code>physical design</code>, i.e. decisions as to what entities are grouped within/across files.</li>
+</ul>
+</li>
+<li><p><strong>multiple files programs</strong> Aside from having to use libraries, large programs need to be split into different files for various reasons:</p>
+<ul>
+<li><strong>Speed up compilation:</strong> Upon changes to the code, the compiler will recompile only the files that had a change.</li>
+<li><strong>Increase organization, decrease browsing time:</strong> Physically splitting your code along logical lines will make it easier to browse through the code to locate classes, functions, etc.</li>
+<li><strong>Facilitate code reuse:</strong> Modular physical design allows for grouping related entities and separating them from less related ones. Each group can then be logically designed to be reusable across different projects. Reused code can be fixed, fixing all projects that use it.</li>
+<li><strong>Split coding responsibilities among programmers:</strong> For really large projects, several programmers are involved. The larger are the program files, the more likely it is that several programmers are changing the same file simultaneously.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-compilation-unit"><a href="#2-compilation-unit" class="headerlink" title="2. compilation unit"></a>2. compilation unit</h4><ul>
+<li><p>In C++, a compilation unit is a file (<code>.cpp</code>)</p>
+</li>
+<li><p>A file may contain several functions, data structures, or classes (unlike Java)</p>
+</li>
+<li><p>Each <strong>compilation unit</strong> is compiled individually into an object file</p>
+</li>
+<li><p>The object files typically have cross-references to other object files</p>
+</li>
+<li><p>The linker then attempts to resolve cross-references between the object files to form the unique executable file.</p>
+</li>
+<li><p>Each component is a group of <code>highly cohesive</code> and <code>highly coupled</code> elements</p>
+</li>
+<li><p><strong>Cohesion</strong>: The degree to which the elements of a module belong together in the achievement of a common goal.</p>
+</li>
+<li><p>Cohesion is increased if:</p>
+<ul>
+<li>The functionalities embedded in a module have much in common.</li>
+<li>The composing elements carry out a small number of related activities, by avoiding coarsely grained and/or unrelated sets of data.</li>
+</ul>
+</li>
+<li><p>Advantages of <code>high cohesion</code>:</p>
+<ul>
+<li>Increased <code>understandability</code> of modules (simpler, fewer operations).</li>
+<li>Increased <code>maintainability</code>, because changes in one module require fewer changes in other modules.</li>
+<li>Increased <code>reusability</code>, because application developers will find the component they need more easily among the cohesive set of operations provided by the module.</li>
+</ul>
+</li>
+<li><p><strong>Coupling</strong>: the degree to which an element relies on other elements for its operation</p>
+<ul>
+<li>Coupling is not a desired quality, but is a side-effect of defining different elements to carry a common task</li>
+<li>Much related to cohesion: <strong>good modules</strong> exhibit <code>high cohesion</code> and <code>high coupling</code></li>
+<li>Coupling between modules is what really needs to be avoided</li>
+</ul>
+</li>
+<li><p>Disadvantages of high coupling:</p>
+<ul>
+<li>A change in one module forces a ripple effect of changes in other modules</li>
+<li>Assembly of modules requires more effort due to the increased inter-module<br>dependency</li>
+<li>A module might be harder to reuse and/or test because dependent modules must be included</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-header-cpp-files"><a href="#3-header-cpp-files" class="headerlink" title="3. header/cpp files"></a>3. header/cpp files</h4><ul>
+<li><p><strong>header File</strong> (<code>.h</code> file)</p>
+<ul>
+<li>Contains class declaration with <code>free functions</code> and <code>operators declarations</code></li>
+<li>Useful to programmers, as it is overview of a component that omits<br>implementation details</li>
+</ul>
+</li>
+<li><p><strong>Source File</strong> (<code>.cpp</code> file)</p>
+<ul>
+<li>Contains free/member function definitions</li>
+<li>The <code>.cpp</code> file is a compilation unit  </li>
+</ul>
+</li>
+<li><p><strong>General rules</strong>:</p>
+<ul>
+<li>There should be a <strong>one-to-one</strong> relationship between a given <code>.cpp</code> file and a corresponding <code>.h</code> file, and they should have the <strong>same name</strong>.</li>
+<li>The <code>.cpp</code> file “<code>#includes</code>” its corresponding <code>.h</code> file.</li>
+<li>A <code>.cpp</code> file should <strong>never</strong> be “<code>#included</code>”, as it effectively merges two compilation units together.</li>
+</ul>
+</li>
+<li><p><code>cpp</code> files contain the executable code, i.e. function definitions</p>
+<ul>
+<li>Function definitions:<ul>
+<li><strong>Functions</strong> - <code>main()</code> function, free functions, member functions</li>
+<li><strong>Operators</strong> - free operators, member operators</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-includes"><a href="#4-includes" class="headerlink" title="4. includes"></a>4. includes</h4><ul>
+<li>Two types to use <code>#include</code><ul>
+<li><code>#include &quot;mymodule.h&quot;</code><ul>
+<li>Quotes indicate a <strong>user-defined</strong> module</li>
+<li>The compiler will find it in your project directories</li>
+</ul>
+</li>
+<li><code>#include &lt;mymodule.h&gt;</code><ul>
+<li><code>&lt; &gt;</code> indicate predefined <strong>library</strong> <code>header</code> file</li>
+<li>The compiler will find it in the library directories</li>
+<li>Using different search paths</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-redundant-includes"><a href="#5-redundant-includes" class="headerlink" title="5. redundant includes"></a>5. redundant includes</h4><ul>
+<li><p>Use <strong>preprocessor</strong> directives</p>
+<ul>
+<li>Instructs the compiler to read a header file <strong>only once</strong></li>
+</ul>
+</li>
+<li><p>two ways for <code>fname.h</code> :</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> FNAME_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FNAME_H</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">//Content of header file</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>#pragma once</code>  </li>
+</ul>
+</li>
+</ul>
+<h4 id="6-namespaces"><a href="#6-namespaces" class="headerlink" title="6. namespaces"></a>6. namespaces</h4><ul>
+<li><p><strong>Namespace</strong>: Collection of name definitions inside of a program, potentially across different files</p>
+</li>
+<li><p>For example, namespace “std” is common in libraries. Has all standard library definitions we need</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Includes <u>entire</u> standard library of name definitions<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br></pre></td></tr></table></figure></li>
+<li>Can specify just the objects we want</li>
+<li>Can be more efficient, as it avoids including things we don’t use</li>
+</ul>
+</li>
+<li><p>This is one reason why the use of using <code>NS::name</code> directive is <strong>advocated</strong> over using <code>namespace NS</code></p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS1;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NS2;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS1::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">using</span> <span class="title">NS2::MyFunction</span><span class="params">()</span></span>;</span><br><span class="line">myFunction();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>global namespace</strong></p>
+<ul>
+<li>All code goes in some namespace</li>
+<li>Unless specified, code belongs to the global namespace<ul>
+<li>No need for <strong>using</strong> directive</li>
+<li>Global namespace always available</li>
+<li>But there is no way to “turn it off”</li>
+<li>Thus, global namespace is prone to <strong>name clashes</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>the same namespace needs to be declared in both <code>.h</code> and <code>.cpp</code> files</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In the header file         </span></span><br><span class="line">  <span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//In the implementation file (definitions):</span></span><br><span class="line"><span class="keyword">namespace</span> Space1</span><br><span class="line">&#123;     </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">greeting</span><span class="params">()</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello from namespace Space1.\n&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>global vs. unnamed namespace</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i = <span class="number">4</span>; <span class="comment">// this is local</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>; <span class="comment">// this is global</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// ERROR, i is ambiguous</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h3 id="Slide-Set-2"><a href="#Slide-Set-2" class="headerlink" title="Slide Set 2:"></a>Slide Set 2:</h3><h4 id="1-structs-and-classes-as-data-types"><a href="#1-structs-and-classes-as-data-types" class="headerlink" title="1. structs and classes as data types"></a>1. structs and classes as data types</h4><ul>
+<li><p>User-defined data types using <code>struct</code> (as in C), as well as <code>class</code> (object-oriented programming)</p>
+<ul>
+<li>Both are allowed in the same program</li>
+<li>In fact, they are almost equivalent, but <code>struct</code> was kept for backward compatibility</li>
+<li>A <code>struct</code> can have data members, methods, constructors, destructors, etc</li>
+<li>One <strong>difference</strong> is that a <code>struct</code> sets its members as <code>public</code> by default</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-variable-initialization"><a href="#2-variable-initialization" class="headerlink" title="2. variable initialization"></a>2. variable initialization</h4><ul>
+<li><p>Declarations can include an optional initialization, which can use different syntactical forms:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Type a1 &#123;v&#125;;</span><br><span class="line">Type a2 = &#123;v&#125;;</span><br><span class="line">Type a3 = v;</span><br><span class="line"><span class="function">Type <span class="title">a4</span><span class="params">(v)</span></span>;  </span><br></pre></td></tr></table></figure></li>
+<li><p>All of these are widely used and apparently equivalent.</p>
+</li>
+<li><p>However:</p>
+<ul>
+<li>Some are restricted to use in certain situations.</li>
+<li>Only the first one is universally usable, and is actually safer, as it implicitly does some <strong>checking</strong> of the value passed versus the specified <strong>type</strong>.  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a1 = <span class="number">1.5</span>; <span class="comment">//allowed using truncation</span></span><br><span class="line"><span class="keyword">int</span> a1 &#123;<span class="number">1.5</span>&#125;; <span class="comment">//not allowed, as type checking is enforced</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Default initialization:</strong> variable is constructed with no initializer.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//For basic types, the previous value held in the memory space is kept.</span></span><br><span class="line"><span class="comment">//For objects, the default constructor is called.</span></span><br><span class="line"><span class="keyword">int</span> x;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> s;</span><br><span class="line">classA *objAv1 = <span class="keyword">new</span> classA;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Value initialization:</strong> variable is constructed with an empty initializer.  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//For basic types, the value is zero-initialized.</span></span><br><span class="line"><span class="comment">//For objects, each member is value-initialized.</span></span><br><span class="line"><span class="keyword">int</span> x&#123;&#125;;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> s&#123;&#125;;</span><br><span class="line">classA objA = classA();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Direct initialization:</strong> variable is constructed using explicit constructor arguments.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//For basic types, no constructors, but constructor call syntax can be used.</span></span><br><span class="line"><span class="comment">//For objects, the corresponding constructor is called</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">x</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;hello&quot;</span>)</span></span>;</span><br><span class="line"><span class="function">classA <span class="title">objA</span><span class="params">(value1,value2,value3)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Copy initialization:</strong> Variable is created using the value(s) from an existing object of the same type, or uses a converting sequence if available. <strong>Applies only to named objects</strong>.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> s = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">classA objAv1; <span class="function">classA <span class="title">objAv2</span><span class="params">(objAv1)</span></span>;</span><br><span class="line">classA objAv3 = objAv1;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Copy initialization is implicitly used when passing and returning objects by value.</li>
+</ul>
+</li>
+<li><p><strong>List initialization</strong>: Initializes an object from a braced initialization list.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> s&#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> n1&#123;<span class="number">1</span>&#125;; <span class="comment">// direct-list-initialization</span></span><br><span class="line"><span class="keyword">int</span> n2 = &#123;<span class="number">1</span>&#125;; <span class="comment">// copy-list-initialization  </span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Reference initialization:</strong> Binds a reference to an object.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>&amp; c = a[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">int</span> i1; <span class="keyword">int</span>&amp; iref = &amp;i1;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Reference initialization is used implicitly when a value is passed by reference or a reference is returned from a function.  </li>
+</ul>
+</li>
+<li><p><strong>Aggregate initialization</strong>: Initializes an aggregate from braced initialization list. It is list initialization but applied to aggregates.  </p>
+<ul>
+<li>Simply stated, an <code>aggregate</code> is either:<ul>
+<li>an <code>array</code></li>
+<li>an <code>object</code> of a <code>class</code> that has <code>only public members</code> and <code>no constructors</code></li>
+<li>Definition of an aggregate varies between standards.<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">3</span>] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> i[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">aggrB</span>&#123;</span></span><br><span class="line"><span class="keyword">int</span> x, y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">aggrA</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> a, b, c;</span><br><span class="line">  aggrB b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">aggrA a1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,&#123;<span class="number">4</span>,<span class="number">5</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-implicit-explicit-type-coercion"><a href="#3-implicit-explicit-type-coercion" class="headerlink" title="3. implicit/explicit type coercion"></a>3. implicit/explicit type coercion</h4><ul>
+<li><strong>type coercion</strong>: implicitly or explicitly changing the type of variables or values, and this makes C++ a <strong>weakly typed</strong> language.</li>
+</ul>
+<p><code>int var = 2.99; // 2 is assigned to var!</code></p>
+<h5 id="static-cast-dynamic-cast"><a href="#static-cast-dynamic-cast" class="headerlink" title="static_cast, dynamic_cast"></a>static_cast, dynamic_cast</h5><ul>
+<li>Different kinds of <strong>Explicit type casting</strong><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static_cast</span>&lt;Type&gt;(expression)</span><br><span class="line"><span class="comment">//General-purpose type casting</span></span><br><span class="line"><span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(intVar)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const_cast</span>&lt;Type&gt;(expression)</span><br><span class="line"><span class="comment">//Cast-out “constantness”</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">dynamic_cast</span>&lt;Type&gt;(expression)</span><br><span class="line"><span class="comment">//Runtime-checked conversion of pointers and references within a single class hierarchy. Used for downcasting from a superclass to a subclass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">reinterpret_cast</span>&lt;Type&gt;(expression)</span><br><span class="line"><span class="comment">//Implementation-dependent casting, performs a binary copy and assigns the new type to the resulting binary copied value. Highly unsafe and error-prone.</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="upcasting-downcasting"><a href="#upcasting-downcasting" class="headerlink" title="* upcasting/downcasting"></a>* upcasting/downcasting</h5><ul>
+<li><p><code>static_cast</code> makes a static (compile-time) type cast, but correct runtime behavior cannot be verified.</p>
+</li>
+<li><p>Use <code>dynamic_cast</code> to <strong>downcast</strong> into a subclass</p>
+</li>
+<li><p><code>dynamic_cast</code> works on <code>pointers</code></p>
+</li>
+<li><p>Does runtime checking to verify that the cast is successful</p>
+</li>
+<li><p>Also deals with <strong>polymorphic types</strong> and <strong>virtual methods</strong> at runtime</p>
+</li>
+</ul>
+<h4 id="4-conversion-sequences"><a href="#4-conversion-sequences" class="headerlink" title="4. conversion sequences"></a>4. conversion sequences</h4><ul>
+<li><p>Two things can be used in a conversion sequence:</p>
+<ul>
+<li><p><strong>conversion constructor</strong>: a constructor that takes a value of a type and creates an object of another type. <code>A::A(int)&#123;...&#125;</code></p>
+</li>
+<li><p><strong>conversion operator</strong>: a member operator that has the name of a type.<br><code>A::operator int()&#123;...&#125;</code></p>
+</li>
+</ul>
+</li>
+<li><p>If you don’t want your constructors or operators to be used in a conversion sequence, you have to declare them as <code>explicit</code> in the class declaration</p>
+<ul>
+<li><code>explicit B(int);</code></li>
+<li><code>explicit operator bool() const;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="5-pointers"><a href="#5-pointers" class="headerlink" title="5. pointers"></a>5. pointers</h4><ul>
+<li><p>A pointer variable contains the <strong>memory address</strong> of a portion of memory that in turn contains a specific value.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">99</span>;</span><br><span class="line"><span class="keyword">int</span>* p = &amp;i;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Two operators</strong> on pointers:</p>
+<ul>
+<li><strong>Dereferencing operator</strong>: <code>*</code>, e.g. <code>*p</code> refers to the object pointed to by the pointer.</li>
+<li><strong>Address operator</strong>: <code>&amp;</code>, e.g. <code>&amp;i</code> refers to the address of the first memory cell holding a value.</li>
+</ul>
+</li>
+<li><p><strong>pointer assignment</strong>: <code>p1 = &amp;v1;</code>, <code>p2 = p1;</code></p>
+</li>
+<li><p><strong>value assignment</strong>: <code>*p2 = *p1;</code></p>
+</li>
+<li><p>If pointers are declared in a function</p>
+<ul>
+<li>The pointer is managed as a <strong>local variable</strong></li>
+<li>The <strong>value</strong> pointed to is <strong>dynamically allocated/deallocated</strong>,</li>
+</ul>
+</li>
+<li><p>allocated with <code>new</code> operator, deallocated wih the <code>delete</code> operator.</p>
+</li>
+<li><p>Allocated on the <code>heap</code> (also known as <code>freestore</code>) through the runtime system’s interaction with the operating system.</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line">p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">5</span>); <span class="comment">//allocate memory</span></span><br><span class="line">... <span class="comment">//Some processing...</span></span><br><span class="line"><span class="keyword">delete</span> p; <span class="comment">//deallocate memory</span></span><br><span class="line">p = <span class="literal">NULL</span>; <span class="comment">//prevents dangling pointer errors</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-pointer-artithmetic"><a href="#6-pointer-artithmetic" class="headerlink" title="6. pointer artithmetic"></a>6. pointer artithmetic</h4><ul>
+<li>Can perform arithmetic operations on pointers</li>
+<li>Used to navigate arrays (covered later)<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *d;</span><br><span class="line">d = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure></li>
+<li><code>d</code> refers to: `address of new int[10]``</li>
+<li><code>d + 1</code> refers to: <code>address of new int[10] + 1*sizeof(int)</code>(Note: type of int is <strong>4 bytes</strong>, so sizeof(int) is 4 bytes.)</li>
+<li><code>d + 2</code> refers to: <code>address of new int[10] + 2*sizeof(int)</code></li>
+<li><code>d[i] == *(&amp;d[0]+i) == *(d+i)</code></li>
+</ul>
+<h4 id="7-pointers-and-const"><a href="#7-pointers-and-const" class="headerlink" title="7. pointers and const"></a>7. pointers and const</h4><ul>
+<li><strong>two</strong> sepatate meanings/usages of <strong>const</strong><ul>
+<li>Specify the constantness of the pointer</li>
+<li>Specify the constantness of the value pointed to.<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p1 = &amp;x; <span class="comment">// non-const pointer to non-const int</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * p2 = &amp;x; <span class="comment">// non-const pointer to const int</span></span><br><span class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p3 = &amp;x; <span class="comment">// const pointer to non-const int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p4 = &amp;x; <span class="comment">// const pointer to const int</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-void-wild-dangling-null-pointers"><a href="#8-void-wild-dangling-null-pointers" class="headerlink" title="8.  void/wild/dangling/null pointers"></a>8.  void/wild/dangling/null pointers</h4><ul>
+<li><p><strong>void pointer</strong>: a pointer that is allowed to be pointing to a value of any type.</p>
+<ul>
+<li>disadvantage: need to <strong>cast</strong> them specifically in order to use them.<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void* data</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">increase</span> <span class="params">(<span class="keyword">void</span>* data, <span class="keyword">int</span> psize)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> ( psize == <span class="keyword">sizeof</span>(<span class="keyword">char</span>) )&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span>* pchar; pchar=(<span class="keyword">char</span>*)data; ++(*pchar); &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (psize == <span class="keyword">sizeof</span>(<span class="keyword">int</span>) )&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>* pint; pint=(<span class="keyword">int</span>*)data; ++(*pint); &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a = <span class="string">&#x27;x&#x27;</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">1602</span>;</span><br><span class="line">increase (&amp;a,<span class="keyword">sizeof</span>(a));</span><br><span class="line">increase (&amp;b,<span class="keyword">sizeof</span>(b));</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;, &quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>wild pointer</strong>: a pointer that points to an arbitrary memory location.</p>
+<ul>
+<li>This is most often due to an <code>uninitialized pointer</code> declaration</li>
+<li>like <code>int *x;</code></li>
+</ul>
+</li>
+<li><p><strong>wild pointer</strong> can lead:</p>
+<ul>
+<li><p><strong>Segmentation fault</strong>:</p>
+<ul>
+<li>pointing to an address that is not accessible by the program’s process</li>
+<li>pointing to an address that contains read-only data</li>
+</ul>
+</li>
+<li><p><strong>Arbitrary value</strong>:</p>
+<ul>
+<li>pointing to a valid address that contains a valid but arbitrary integer value</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>dangling pointer</strong>: a pointer that used to point to a valid memory area, that has now been potentially <strong>reassigned</strong> to another usage.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">1234</span>; <span class="comment">// num is local to func</span></span><br><span class="line">    <span class="keyword">return</span> &amp;num; <span class="comment">// func returns pointer to num</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ClassA *objA = <span class="keyword">new</span> ClassA();</span><br><span class="line">    <span class="keyword">delete</span>(objA); <span class="comment">// *objA is deallocated</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// objA is now a dangling pointer</span></span><br><span class="line">    <span class="comment">// Dereferencing will still appear</span></span><br><span class="line">    <span class="comment">// to work, until the memory is used</span></span><br><span class="line">    <span class="comment">// for something else</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>null pointer</strong>: a pointer that <strong>points nowhere</strong></p>
+<ul>
+<li><code>int* x = nullptr;</code></li>
+<li><code>int* y = NULL;</code></li>
+<li><code>int* z = 0;</code></li>
+<li>Dereferencing a null pointer is a <strong>compilation error</strong> : safer pointer usage.</li>
+</ul>
+</li>
+<li><p>Pointers should be initialized as <code>null</code> pointers.</p>
+</li>
+<li><p><code>Dangling pointers</code> should be assigned to <code>null</code>.</p>
+</li>
+<li><p>Check for null pointer is then a good way to know if a pointer is <code>valid</code> or not.   </p>
+</li>
+</ul>
+<h5 id="stack-heap-new-delete"><a href="#stack-heap-new-delete" class="headerlink" title="* stack/heap/new/delete"></a>* stack/heap/new/delete</h5><h5 id="arithmetics"><a href="#arithmetics" class="headerlink" title="* arithmetics"></a>* arithmetics</h5><h4 id="9-references"><a href="#9-references" class="headerlink" title="9. references"></a>9. references</h4><ul>
+<li><p>A <strong>reference</strong> is in fact an “alias” for a memory space.</p>
+</li>
+<li><p>Terminology: the reference is an <code>alias</code> to a referent (the value pointed to).</p>
+</li>
+<li><p>Both the <code>reference</code> and the <code>referee</code> represent the <strong>same value/object</strong>.</p>
+</li>
+<li><p>such as <code>int&amp; r&#123;v1&#125;;</code>, return <code>&amp;r</code></p>
+</li>
+<li><p><strong>references</strong> are often used to <code>pass parameters</code> or even <code>return a value</code>.</p>
+</li>
+</ul>
+<h4 id="10-smart-pointers-NO"><a href="#10-smart-pointers-NO" class="headerlink" title="10. smart pointers (NO)"></a>10. <del>smart pointers</del> (<strong>NO</strong>)</h4><h4 id="11-parameter-passing"><a href="#11-parameter-passing" class="headerlink" title="11. parameter passing"></a>11. parameter passing</h4><ul>
+<li>Parameters can be passed to a function:<ul>
+<li>by <strong>value</strong></li>
+<li>by <strong>pointer</strong></li>
+<li>by <strong>reference</strong><ul>
+<li>cannot pass <code>NULL</code>, as a reference cannot be <code>NULL</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="12-strings"><a href="#12-strings" class="headerlink" title="12. strings"></a>12. strings</h4><ul>
+<li>two types:<ul>
+<li>C-style character strings<ul>
+<li><code>char greeting[6]=&#123;&#39;H&#39;,&#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;,&#39;\0&#39;&#125;;</code> terminated by <code>\0</code> (a null character)</li>
+<li><code>char greeting[] = &quot;Hello&quot;;</code></li>
+<li><code>&lt;cstring&gt;</code></li>
+</ul>
+</li>
+<li><code>string</code> class type introduced with Standard C++</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Slide-Set-3"><a href="#Slide-Set-3" class="headerlink" title="Slide Set 3:"></a>Slide Set 3:</h3><h4 id="1-input-output-streams"><a href="#1-input-output-streams" class="headerlink" title="1. input/output streams"></a>1. input/output streams</h4><ul>
+<li><p>C++ uses streams for input/output.</p>
+</li>
+<li><p>C++ programs can also use C-style input/output, which don’t use streams.</p>
+</li>
+<li><p>Streams are objects that are defined to handle a device on which input or output operations are performed.</p>
+</li>
+<li><p>Streams allow C++ programs to interact with external entities controlled by the operating system,</p>
+<ul>
+<li>such as:<ul>
+<li>program execution console</li>
+<li>keyboard</li>
+<li>files</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Other external entities such as network sockets are not provided by basic C++ stream classes, but are available in various libraries (e.g. Boost).</p>
+</li>
+</ul>
+<h4 id="2-cin-cout"><a href="#2-cin-cout" class="headerlink" title="2. cin/cout"></a>2. cin/cout</h4><ul>
+<li><p><strong>I/O stream</strong> objects <code>cin</code>, <code>cout</code>, <code>cerr</code></p>
+</li>
+<li><p>Defined in the C++ library called <code>&lt;iostream&gt;</code></p>
+</li>
+<li><p>Must have these lines (<em>pre-processor</em> directives) :</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>cout</code> is an object that is an instance of the <code>ostream</code> class, defined in the <code>iostream library</code>.  </p>
+</li>
+<li><p><code>cout</code> is a stream, <code>&lt;&lt;</code> is the <u>stream insertion operator</u> that is used to output to the stream.</p>
+</li>
+<li><p>Any data can be <code>outputted</code> to a <code>stream</code></p>
+<ul>
+<li>Variables</li>
+<li>Constants</li>
+<li>Literals (eg. string)</li>
+<li>Results of expressions</li>
+</ul>
+</li>
+<li><p>Stream manipulators</p>
+<ul>
+<li>set output specially-formatted numbers<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; setprecision(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//show exaclty 2 digits after the decimal point: 78.50</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>keyboard input stream</p>
+<ul>
+<li>use <code>cin</code> for input from the keyboard</li>
+<li>use <code>&gt;&gt;</code> (stram extraction operator)</li>
+<li><code>cin &gt;&gt; num</code> (right-hand-side must be a variable)</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-files-stream-declarations-open-close-usage"><a href="#3-files-stream-declarations-open-close-usage" class="headerlink" title="3. files stream declarations, open/close, usage"></a>3. files stream declarations, open/close, usage</h4><ul>
+<li><p>Similar to <code>cin/cout</code> streams, there are streams for input/output from/to files</p>
+<ul>
+<li>File input : <code>ifstream</code></li>
+<li>File output : <code>ofstream</code></li>
+<li>Part of library <code>&lt;fstream&gt;</code></li>
+<li>use <code>&lt;&lt;</code> operator to <code>write</code></li>
+<li>use <code>&gt;&gt;</code> operator to <code>read</code></li>
+</ul>
+</li>
+<li><p>output:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line">ofstream outputfilestream;</span><br><span class="line">outputfilestream.open(<span class="string">&quot;scores.txt&quot;</span>);</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="function">ofstream <span class="title">outputfilestream</span><span class="params">(<span class="string">&quot;scores.txt&quot;</span>)</span></span>;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">outputfilestream.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>input:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ifstream inputfilestream;</span><br><span class="line">infilestream.open(<span class="string">&quot;scores.txt&quot;</span>);</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line"><span class="function">ifstream <span class="title">inputfilestream</span><span class="params">(<span class="string">&quot;scores.txt&quot;</span>)</span></span>;</span><br><span class="line">inputfilestream.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fsteram</code> object akso be used, but need to specify <code>file modes</code>, such as <code>ios::out</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fstream filestream;</span><br><span class="line">filestream.open(<span class="string">&quot;scores.txt“, ios::out);</span></span><br><span class="line"><span class="string">//output operations</span></span><br><span class="line"><span class="string">filestream.close();</span></span><br><span class="line"><span class="string">//do other things</span></span><br><span class="line"><span class="string">filestream.open(&quot;</span>scores.txt“, ios::in);</span><br><span class="line"><span class="comment">//input operations</span></span><br><span class="line">filestream.close();</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>file modes</strong>:</p>
+<ul>
+<li><code>ios::in</code>  Opens a file for input.</li>
+<li><code>ios::out</code>  Opens a file for output.</li>
+<li><code>ios::app</code> Appends all output to the end of the file.</li>
+<li><code>ios::ate</code>  Opens a file for output. If the file already exists, move to the end of the file. Data can be written anywhere in the file.</li>
+<li><code>ios::trunc</code> Discards the file’s contents if the file already exists. (This is the default action for ios:out).</li>
+<li><code>ios::binary</code> Opens a file for binary input and output.  </li>
+</ul>
+</li>
+<li><p>some examples:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">ofstream output;</span><br><span class="line"><span class="comment">// Create/open a file</span></span><br><span class="line">output.open(<span class="string">&quot;scores.txt&quot;</span>);</span><br><span class="line"><span class="comment">// Write two lines</span></span><br><span class="line">output &lt;&lt; <span class="string">&quot;John&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="string">&quot;T&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="string">&quot;Smith&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="number">90</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">output &lt;&lt; <span class="string">&quot;Eric&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="string">&quot;K&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="string">&quot;Jones&quot;</span> &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; <span class="number">85</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">// Close the file</span></span><br><span class="line">output.close();</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function">ifstream <span class="title">input</span><span class="params">(<span class="string">&quot;scores.txt&quot;</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> firstName, lastName; <span class="keyword">char</span> mi; <span class="keyword">int</span> score;</span><br><span class="line">input &gt;&gt; firstName &gt;&gt; mi &gt;&gt; lastName &gt;&gt; score;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; firstName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; mi &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; lastName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; score &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">input &gt;&gt; firstName &gt;&gt; mi &gt;&gt; lastName &gt;&gt; score;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; firstName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; mi &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; lastName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; score &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">input.close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//OR</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> firstName, lastName; <span class="keyword">char</span> mi; <span class="keyword">int</span> score;</span><br><span class="line"><span class="function">ifstream <span class="title">input</span><span class="params">(<span class="string">&quot;scores.txt&quot;</span>)</span></span>;</span><br><span class="line">input &gt;&gt; firstName &gt;&gt; mi &gt;&gt; lastName &gt;&gt; score;</span><br><span class="line"><span class="keyword">while</span> (!input.eof()) &#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; firstName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; mi &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; lastName &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; score &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">input &gt;&gt; firstName &gt;&gt; mi &gt;&gt; lastName &gt;&gt; score;</span><br><span class="line">&#125;</span><br><span class="line">input.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>stream states and functions</strong></p>
+<ul>
+<li><p><code>eof()</code> returns <code>true</code> if the <code>eofbit</code> flag is set.</p>
+</li>
+<li><p><code>fail()</code> returns <code>true</code> if the <code>failbit</code> or <code>hardfail</code> flag is set</p>
+</li>
+<li><p><code>bad()</code> returns <code>true</code> if the <code>badbit</code> flag is set</p>
+</li>
+<li><p><code>good()</code> returns <code>true</code> is the <code>goodbit</code> flag is set</p>
+</li>
+<li><p><code>clear()</code> clear all stream state flags</p>
+</li>
+<li><p><code>ios::eofbit</code> set when the end of an input stream is reached</p>
+</li>
+<li><p><code>ios::failbit</code> set when an operation on the stream has failed</p>
+</li>
+<li><p><code>ios::hardfail</code> set when an unrecovered error has occurred</p>
+</li>
+<li><p><code>ios::badbit</code> set when an invalid operation has been attempted</p>
+</li>
+<li><p><code>ios::goodbit</code> set if none of the preceding bits is set</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-lt-lt-and-gt-gt-operator-overloading"><a href="#4-lt-lt-and-gt-gt-operator-overloading" class="headerlink" title="4. &lt;&lt; and &gt;&gt; operator overloading"></a>4. &lt;&lt; and &gt;&gt; operator overloading</h4><ul>
+<li>To enable a <code>user-defined type</code> to be outputted to a stream, the <code>&lt;&lt;</code> operator must be <strong>overloaded</strong> to accept this type as an operand.</li>
+</ul>
+<h4 id="5-MFC-serialization-NO"><a href="#5-MFC-serialization-NO" class="headerlink" title="5. MFC serialization (NO)"></a>5. <del>MFC serialization</del> (<strong>NO</strong>)</h4><hr>
+<h3 id="Slide-Set-4"><a href="#Slide-Set-4" class="headerlink" title="Slide Set 4:"></a>Slide Set 4:</h3><h4 id="1-classes-vs-structs"><a href="#1-classes-vs-structs" class="headerlink" title="1. classes vs. structs"></a>1. classes vs. structs</h4><ul>
+<li><p>As <code>classes</code> are an expanded <code>struct</code>, it is also possible to declare and use a struct that includes member functions, and that even inherits from another struct, just like classes.</p>
+</li>
+<li><p>The only difference between <code>class</code> and <code>struct</code> is that the members of a <code>struct</code> are <code>public</code> by default, but <code>private</code> by default for a <code>class</code>.</p>
+</li>
+<li><p>A <code>struct</code> that does not use object-oriented features is nicknamed a <strong>POD</strong> for “plain old data structure”.</p>
+</li>
+</ul>
+<h4 id="2-struct-usage"><a href="#2-struct-usage" class="headerlink" title="2. struct usage"></a>2. struct usage</h4><ul>
+<li><p>Once the <code>struct</code> has been declared, it can be used as any other type</p>
+</li>
+<li><p>The members of a struct can be referred to using the <code>dot</code> notation</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">CDAccount1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">double</span> balance;</span><br><span class="line">  <span class="keyword">double</span> interestRate;</span><br><span class="line">  <span class="keyword">int</span> term;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CDAccount1 account;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">double</span> interestRate;</span><br><span class="line">  interestRate = account.interestRate/<span class="number">100.0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-class-declarations-h-and-cpp-files"><a href="#3-class-declarations-h-and-cpp-files" class="headerlink" title="3. class declarations (.h and .cpp files)"></a>3. class declarations (.h and .cpp files)</h4><ul>
+<li><p>A <code>Class</code> is an <strong>Abstract Data Type</strong></p>
+</li>
+<li><p>A C++ class represents an abstract data type by allowing functions to be <code>syntactically encapsulated</code> into its definition, along with its data elements.</p>
+</li>
+<li><p>The syntax of a <code>class</code> definition is the same as for a <code>struct</code>.</p>
+</li>
+</ul>
+<h4 id="4-declaring-using-objects"><a href="#4-declaring-using-objects" class="headerlink" title="4. declaring/using objects"></a>4. declaring/using objects</h4><ul>
+<li><p>Variables of a class type are referred to as <code>objects</code>.</p>
+</li>
+<li><p>Objects are declared using the same syntax as for basic types.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DayOfYear today;</span><br><span class="line">DayOfYear *birthday = <span class="keyword">new</span> DayOfYear();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Class types</code> can be used anywhere a type can be used:</p>
+<ul>
+<li>As type of a variable</li>
+<li>As parameter to a function</li>
+<li>As a return type to a function</li>
+<li>As a value pointed to by a pointer</li>
+</ul>
+</li>
+<li><p>Members of a class are referred to using the dot notation and their access is regulated by the <code>private</code>, <code>public</code> and <code>protected</code> access specifiers.</p>
+</li>
+</ul>
+<h5 id="with-or-without-pointers"><a href="#with-or-without-pointers" class="headerlink" title="* with or without pointers"></a>* with or without pointers</h5><ul>
+<li>The members of an object can be referred to using the dot notation:<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> day1 = today.getDay();</span><br><span class="line"><span class="keyword">int</span> day2 = *birthday.getDay(); <span class="comment">// equivalent</span></span><br><span class="line"><span class="keyword">int</span> day3 = birthday-&gt;getDay(); <span class="comment">// equivalent</span></span><br></pre></td></tr></table></figure></li>
+<li>kinds of methods<ul>
+<li><code>Accessor</code>: method whose goal is to expose a value in the state of an object, generally the value of a particular data member.</li>
+<li><code>Mutator</code>: method whose goal is to change a value in the state of an object.</li>
+<li><code>Service method</code>: method that exposes some service or desired behavior to other classes/objects.</li>
+<li><code>Internal behavior methods</code>: methods that are used by the class/object itself internally, that defines some of its behavior that should not be triggered explicitly from the exterior. These methods should thus be <code>private</code>.</li>
+<li><code>Constructor</code>: method whose goal is to manage the operations to be performed as an object is created.</li>
+<li><code>Destructor</code>: method whose goal is to manage the operations to be performed as an object is destroyed.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-inline-functions-methods"><a href="#5-inline-functions-methods" class="headerlink" title="5. inline functions/methods"></a>5. inline functions/methods</h4><ul>
+<li><p>A function (or method) can be declared as <code>inline</code>, meaning that its entire code is to be replacing any call to this function.</p>
+</li>
+<li><p>Function inlining aims at execution <code>optimization</code> by eliminating the function call mechanism overhead.</p>
+</li>
+<li><p>However, it has the disadvantage of leading to <code>code bloat</code> if the body of the inline function contains a large amount of code and/or is consuming a large amount of memory and is called frequently at different places in the code.</p>
+</li>
+<li><p>To define a function as inline, one needs to include the <code>inline</code> keyword as a prefix to the function definition. The function declaration does not need to have the <code>inline</code> prefix.</p>
+</li>
+<li><p>In other words, <strong>inline functions have internal linkage</strong>. If you want to make an inline function accessible to other compilation units, they must include the definition of the inline function.</p>
+</li>
+<li><p>Note that declaring a function/method as inline is only a hint for the compiler, and that the compiler may choose not to inline a function if it is not possible, e.g. for recursive functions.</p>
+</li>
+<li><p><code>Rule of thumb</code>: Inline your functions that have <code>very short</code> function definitions. Accessor methods are very good candidates for method inlining.</p>
+</li>
+</ul>
+<h4 id="6-const-specifier"><a href="#6-const-specifier" class="headerlink" title="6. const specifier"></a>6. const specifier</h4><ul>
+<li>Specifies that its subject is constant, i.e. that its value cannot be changed after it is set. Can be applied to:<ul>
+<li><code>Variables</code>: A variable may be declared as <code>const</code>, which signifies that its value cannot be changed after it is initialized. It assumes that the variable is initialized upon declaration.<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">const</span> DayOfYear <span class="title">newYearDay</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>)</span></span>;</span><br></pre></td></tr></table></figure></li>
+<li><code>Function parameters</code>: Declaring a function parameter as <code>const</code> means that the value of this parameter cannot be changed by the execution of<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> i1, <span class="keyword">const</span> inbt i2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> i1 &gt;= i2 ? i1 : i2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>Methods</code>: Declaring a method as <code>const</code> means that this function will not alter the state of the object to which it belongs. By extension, only methods declared as <code>const</code> can be called on an object that was itself declared as <code>const</code> upon declaration.<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">DayOfYear::getDay</span><span class="params">()</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> day;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>Pointers</code> involve <strong>two</strong> different concepts<ul>
+<li>the pointer itself</li>
+<li>the value pointed to</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-static-specifier"><a href="#7-static-specifier" class="headerlink" title="7. static specifier"></a>7. static specifier</h4><ul>
+<li><p>A member of a class can be declared as <code>static</code>, which means that this member is a class member, i.e. it belongs to the class as a whole an can be called on the class rather than on the objects.</p>
+</li>
+<li><p>If it is a data member, its value is unique across all objects of the class, i.e. it is a “class global variable”.</p>
+</li>
+<li><p>If a member function is declared as <code>static</code>, it can only use other members that are also declared as <code>static</code>.</p>
+</li>
+<li><p>Used to define state and behavior that is independent of any particular object’s state instantiated from this class.</p>
+</li>
+<li><p><code>Static</code> member variables are generally initialized outside of the class declaration. Only constant static integral members can be initialized inside of the class declaration. The initialized value must be a constant expression.</p>
+</li>
+<li><p>Other languages allow static classes (e.g. C#), which C++ does not have.</p>
+</li>
+<li><p>Non-member variables can also be declared as <code>static</code>, which has a slightly<br>different meaning:</p>
+<ul>
+<li>When you declare a <strong>variable or function at file scope</strong> the <code>static</code> keyword specifies that the variable or function has internal linkage, i.e. it cannot be referred to outside of the compilation unit in which it is declared.</li>
+<li>When you declare a <strong>local variable</strong> to a function as <code>static</code>, the variable has static duration, i.e. its value is kept even when the execution goes out of the scope of this function. In other words, it is a “global variable that has local scope to this function”.</li>
+</ul>
+</li>
+<li><p>All <code>static</code> variables persist from the <code>start</code> of the execution of the program until the program <code>terminates</code>.</p>
+</li>
+<li><p><code>Non-static member</code> functions can <code>access</code> <strong>all data members</strong> of the <code>class</code>: <code>static</code> and <code>non-static</code>.</p>
+</li>
+<li><p><code>static</code> member functions can <strong>only</strong> operate on the <code>static</code> data members, or call other <code>static</code> member functions.</p>
+</li>
+</ul>
+<h4 id="8-friends"><a href="#8-friends" class="headerlink" title="8. friends"></a>8. friends</h4><ul>
+<li><p>In principle, <code>private</code> and <code>protected</code> members of a class <strong>cannot</strong> be accessed from outside the class in which they are declared.</p>
+</li>
+<li><p>A <code>friend</code> (function or class) of a class may <code>access</code> the members designated as <code>private</code> or <code>protected</code>.</p>
+</li>
+<li><p>Friends are functions/methods or classes <strong>declared</strong> as such <strong>within a class</strong>.</p>
+</li>
+<li><p>Friends are not members, so they are not inherited from a superclass.</p>
+</li>
+</ul>
+<h4 id="9-constructors-destructors"><a href="#9-constructors-destructors" class="headerlink" title="9. constructors/destructors"></a>9. constructors/destructors</h4><ul>
+<li><p>To sum-up, variables allocated on the <code>stack</code> are <code>destroyed</code> as we get out of the block’s scope, but objects allocated on the <code>heap</code> using <code>new</code> need to be manually destroyed using <code>delete</code>.</p>
+</li>
+<li><p>Rule of thumb: for every <code>new</code>, there should be a corresponding <code>delete</code> somewhere.</p>
+</li>
+<li><p>if you <code>define</code> your own constructor(s), make sure that you provide<br>a <code>default constructor</code>, as the default constructor is likely to be called implicitly by the runtime system.</p>
+<h5 id="declaration-implementation"><a href="#declaration-implementation" class="headerlink" title="* declaration/implementation"></a>* declaration/implementation</h5><h5 id="initialization-list"><a href="#initialization-list" class="headerlink" title="* initialization list"></a>* initialization list</h5><h5 id="implicit-explicit-constructor-calls"><a href="#implicit-explicit-constructor-calls" class="headerlink" title="* implicit/explicit constructor calls"></a>* implicit/explicit constructor calls</h5><h5 id="call-chain"><a href="#call-chain" class="headerlink" title="* call chain"></a>* call chain</h5></li>
+<li><p><code>Destructors</code> are called in the exact <code>reverse order</code> as the <code>constructors</code>.</p>
+</li>
+</ul>
+<h4 id="10-inheritance"><a href="#10-inheritance" class="headerlink" title="10. inheritance"></a>10. inheritance</h4><ul>
+<li><p>more <code>flexible</code> and <code>extensible</code> design</p>
+</li>
+<li><p>A <code>base class</code> is a class from which other classes inherit from.</p>
+<ul>
+<li>Often called a <code>super-class</code>, or a parent or ancestor class.</li>
+</ul>
+</li>
+<li><p>A <code>derived class</code> is a class that inherits from a base class.</p>
+<ul>
+<li>Often called a <code>sub-class</code>, or a child or descendent class.</li>
+<li>Data Members</li>
+<li>Member functions</li>
+<li><strong>not inherit</strong><ul>
+<li>constructors, copy constructors</li>
+<li>assignment operator</li>
+<li>destructor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>Multiple inheritance</code> is when a derived class inherits from more than one base class.</p>
+</li>
+<li><p>An <code>abstract class</code> is a class that is meant to be derived from by containing abstract member functions that do not have a definition, assuming that they will find a concrete implementation in a derived class. Because of that, an abstract class cannot be instantiated.</p>
+</li>
+</ul>
+<h5 id="overriding-overloading"><a href="#overriding-overloading" class="headerlink" title="overriding/overloading"></a>overriding/overloading</h5><ul>
+<li><p><code>Overriding</code> is when a member function is included in a <code>derived class</code>, having <code>exactly the same signature</code> as an inherited member function.</p>
+</li>
+<li><p>A function’s <code>signature</code> is defined as:</p>
+<ul>
+<li>Function’s name</li>
+<li>Sequence of types in parameter list</li>
+<li>Including order, number, and types of parameters</li>
+</ul>
+</li>
+<li><p><code>Signature</code> does <code>NOT</code> include:</p>
+<ul>
+<li>Return type</li>
+<li><code>const</code> keywords used for the function or the parameters</li>
+<li>References specifiers (<code>&amp;</code>) used for the parameters</li>
+</ul>
+</li>
+<li><p><code>Overloading</code> is when <code>two or more functions</code> with the <code>same name</code> are<br>defined in the same scope, each having different parameter lists.</p>
+</li>
+<li><p>Thus, <code>overloading</code> applies to inherited member functions, but also<br>applies to free functions or operators available within a certain scope.  </p>
+<h5 id="vs-constructor-destructor-implementation"><a href="#vs-constructor-destructor-implementation" class="headerlink" title="vs. constructor/destructor implementation"></a>vs. constructor/destructor implementation</h5><h5 id="assignment-operator"><a href="#assignment-operator" class="headerlink" title="assignment operator"></a>assignment operator</h5><h5 id="copy-constructor"><a href="#copy-constructor" class="headerlink" title="copy constructor"></a>copy constructor</h5><h5 id="shallow-deep-copy"><a href="#shallow-deep-copy" class="headerlink" title="shallow/deep copy"></a>shallow/deep copy</h5></li>
+</ul>
+<h4 id="11-multiple-inheritance-Yes"><a href="#11-multiple-inheritance-Yes" class="headerlink" title="11. multiple inheritance (Yes)"></a>11. multiple inheritance (<strong>Yes</strong>)</h4><h4 id="12-virtual-inheritance-Yes"><a href="#12-virtual-inheritance-Yes" class="headerlink" title="12. virtual inheritance (Yes)"></a>12. virtual inheritance (<strong>Yes</strong>)</h4><h4 id="13-diamond-problem-Yes"><a href="#13-diamond-problem-Yes" class="headerlink" title="13. diamond problem (Yes)"></a>13. diamond problem (<strong>Yes</strong>)</h4><hr>
+<h3 id="Slide-Set-5"><a href="#Slide-Set-5" class="headerlink" title="Slide Set 5:"></a>Slide Set 5:</h3><h4 id="1-statically-allocated-arrays-one-YES-multidimensional-NO"><a href="#1-statically-allocated-arrays-one-YES-multidimensional-NO" class="headerlink" title="1. statically allocated arrays (one(YES) / multidimensional(NO)"></a>1. statically allocated arrays (one(<strong>YES</strong>) / <del>multidimensional</del>(<strong>NO</strong>)</h4><h5 id="declaration-usage"><a href="#declaration-usage" class="headerlink" title="* declaration, usage"></a>* declaration, usage</h5><h5 id="memory-allocation-model"><a href="#memory-allocation-model" class="headerlink" title="* memory allocation model"></a>* memory allocation model</h5><h5 id="passing-as-parameters"><a href="#passing-as-parameters" class="headerlink" title="* passing as parameters"></a>* passing as parameters</h5><h4 id="2-dynamically-allocated-arrays-one-dimensional-YES-multidimensional-NO"><a href="#2-dynamically-allocated-arrays-one-dimensional-YES-multidimensional-NO" class="headerlink" title="2. dynamically allocated arrays (one-dimensional (YES)) (multidimensional - NO)"></a>2. dynamically allocated arrays (one-dimensional (<strong>YES</strong>)) (<del>multidimensional</del> - <strong>NO</strong>)</h4><h5 id="declaration-usage-1"><a href="#declaration-usage-1" class="headerlink" title="* declaration, usage"></a>* declaration, usage</h5><h5 id="memory-allocation-model-1"><a href="#memory-allocation-model-1" class="headerlink" title="* memory allocation model"></a>* memory allocation model</h5><h5 id="passing-as-parameters-1"><a href="#passing-as-parameters-1" class="headerlink" title="* passing as parameters"></a>* passing as parameters</h5><h4 id="3-array-decay-into-a-pointer-NO"><a href="#3-array-decay-into-a-pointer-NO" class="headerlink" title="3. array decay into a pointer(NO)"></a>3. <del>array decay into a pointer</del>(<strong>NO</strong>)</h4><h4 id="4-static-array-classes-NO"><a href="#4-static-array-classes-NO" class="headerlink" title="4. static array classes (NO)"></a>4. <del>static array classes</del> (<strong>NO</strong>)</h4><h4 id="5-STL-containers-NO"><a href="#5-STL-containers-NO" class="headerlink" title="5. STL containers (NO)"></a>5. <del>STL containers</del> (<strong>NO</strong>)</h4><h5 id="declaration-usage-NO"><a href="#declaration-usage-NO" class="headerlink" title="* declaration, usage (NO)"></a>* <del>declaration, usage</del> (<strong>NO</strong>)</h5><h5 id="iterators-NO"><a href="#iterators-NO" class="headerlink" title="* iterators (NO)"></a>* <del>iterators</del> (<strong>NO</strong>)</h5></div><div class="article-licensing box"><div class="licensing-title"><p>C++ midterm review</p><p><a href="https://bestbonbai.github.io/2020/10/24/C-midterm-review/">https://bestbonbai.github.io/2020/10/24/C-midterm-review/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><a href="https://BestBonBai.github.io"><p>BestBonBai</p></a></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-10-24</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-01-08</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># Recommend Post</span><br><span>  1.<a class="is-size-6" href="/2021/01/08/use-hexo-theme-icarus/" target="_blank">use hexo theme icarus</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/img/alipay.png" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/img/Wechat.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/10/25/Markdown-notes/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Markdown notes</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/10/22/Database-SQL-Q-A-1/"><span class="level-item">Database SQL Q&amp;A 1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">Comments</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'en',
+            id: '6e19acf5a6b7911a8da014282bbf2802',
+            repo: 'BestBonBai.github.io',
+            owner: 'BestBonBai',
+            clientID: '351d88f9c2ba76a62b8e',
+            clientSecret: '0393ece8e2726639cd3aba30c379297c758ad525',
+            admin: ["BestBonBai"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#C-midterm-review"><span>C++ midterm review</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#Slide-Set-1"><span>Slide Set 1:</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-program-structure"><span>1. program structure</span></a></li><li><a class="is-flex is-mobile" href="#2-compilation-unit"><span>2. compilation unit</span></a></li><li><a class="is-flex is-mobile" href="#3-header-cpp-files"><span>3. header/cpp files</span></a></li><li><a class="is-flex is-mobile" href="#4-includes"><span>4. includes</span></a></li><li><a class="is-flex is-mobile" href="#5-redundant-includes"><span>5. redundant includes</span></a></li><li><a class="is-flex is-mobile" href="#6-namespaces"><span>6. namespaces</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#Slide-Set-2"><span>Slide Set 2:</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-structs-and-classes-as-data-types"><span>1. structs and classes as data types</span></a></li><li><a class="is-flex is-mobile" href="#2-variable-initialization"><span>2. variable initialization</span></a></li><li><a class="is-flex is-mobile" href="#upcasting-downcasting"><span>* upcasting/downcasting</span></a></li><li><a class="is-flex is-mobile" href="#4-conversion-sequences"><span>4. conversion sequences</span></a></li><li><a class="is-flex is-mobile" href="#5-pointers"><span>5. pointers</span></a></li><li><a class="is-flex is-mobile" href="#6-pointer-artithmetic"><span>6. pointer artithmetic</span></a></li><li><a class="is-flex is-mobile" href="#7-pointers-and-const"><span>7. pointers and const</span></a></li><li><a class="is-flex is-mobile" href="#arithmetics"><span>* arithmetics</span></a></li><li><a class="is-flex is-mobile" href="#9-references"><span>9. references</span></a></li><li><a class="is-flex is-mobile" href="#10-smart-pointers-NO"><span>10. smart pointers (NO)</span></a></li><li><a class="is-flex is-mobile" href="#11-parameter-passing"><span>11. parameter passing</span></a></li><li><a class="is-flex is-mobile" href="#12-strings"><span>12. strings</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#Slide-Set-3"><span>Slide Set 3:</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-input-output-streams"><span>1. input/output streams</span></a></li><li><a class="is-flex is-mobile" href="#2-cin-cout"><span>2. cin/cout</span></a></li><li><a class="is-flex is-mobile" href="#3-files-stream-declarations-open-close-usage"><span>3. files stream declarations, open/close, usage</span></a></li><li><a class="is-flex is-mobile" href="#4-lt-lt-and-gt-gt-operator-overloading"><span>4. &lt;&lt; and &gt;&gt; operator overloading</span></a></li><li><a class="is-flex is-mobile" href="#5-MFC-serialization-NO"><span>5. MFC serialization (NO)</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#Slide-Set-4"><span>Slide Set 4:</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-classes-vs-structs"><span>1. classes vs. structs</span></a></li><li><a class="is-flex is-mobile" href="#2-struct-usage"><span>2. struct usage</span></a></li><li><a class="is-flex is-mobile" href="#3-class-declarations-h-and-cpp-files"><span>3. class declarations (.h and .cpp files)</span></a></li><li><a class="is-flex is-mobile" href="#with-or-without-pointers"><span>* with or without pointers</span></a></li><li><a class="is-flex is-mobile" href="#5-inline-functions-methods"><span>5. inline functions/methods</span></a></li><li><a class="is-flex is-mobile" href="#6-const-specifier"><span>6. const specifier</span></a></li><li><a class="is-flex is-mobile" href="#7-static-specifier"><span>7. static specifier</span></a></li><li><a class="is-flex is-mobile" href="#8-friends"><span>8. friends</span></a></li><li><a class="is-flex is-mobile" href="#call-chain"><span>* call chain</span></a></li><li><a class="is-flex is-mobile" href="#shallow-deep-copy"><span>shallow/deep copy</span></a></li><li><a class="is-flex is-mobile" href="#11-multiple-inheritance-Yes"><span>11. multiple inheritance (Yes)</span></a></li><li><a class="is-flex is-mobile" href="#12-virtual-inheritance-Yes"><span>12. virtual inheritance (Yes)</span></a></li><li><a class="is-flex is-mobile" href="#13-diamond-problem-Yes"><span>13. diamond problem (Yes)</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#Slide-Set-5"><span>Slide Set 5:</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#passing-as-parameters"><span>* passing as parameters</span></a></li><li><a class="is-flex is-mobile" href="#passing-as-parameters-1"><span>* passing as parameters</span></a></li><li><a class="is-flex is-mobile" href="#3-array-decay-into-a-pointer-NO"><span>3. array decay into a pointer(NO)</span></a></li><li><a class="is-flex is-mobile" href="#4-static-array-classes-NO"><span>4. static array classes (NO)</span></a></li><li><a class="is-flex is-mobile" href="#iterators-NO"><span>* iterators (NO)</span></a></li></ul></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/linglong.jpg" alt="BestBonBai"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">BestBonBai</p><p class="is-size-6 is-block">Just do it!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Montréal, QC, Canada</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/BestBonBai" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/BestBonBai"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:jsbaihualin@hotmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://BestBonBai.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="//www.facebook.com/barry.bai.315/"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="linkedin" href="//www.linkedin.com/in/hualin-bai-841759103/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://google.ca" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Google</span></span><span class="level-right"><span class="level-item tag">google.ca</span></span></a></li><li><a class="level is-mobile" href="/404.html" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">404Charity</span></span><span class="level-right"><span class="level-item tag">/404.html</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Latest Comment</h3><span class="body_hot_comment">Loading...Wait a Minute!</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-08T22:14:18.000Z">2021-01-08</time></p><p class="title"><a href="/2021/01/08/use-hexo-theme-icarus/">use hexo theme icarus</a></p><p class="categories"><a href="/categories/hexo-theme/">hexo-theme</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-02T12:36:31.000Z">2021-01-02</time></p><p class="title"><a href="/2021/01/02/Python-Spider-to-Crawl-PangziTV/">Python Spider to Crawl PangziTV</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/spider/">spider</a> / <a href="/categories/python/spider/funny/">funny</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-26T22:39:54.000Z">2020-12-26</time></p><p class="title"><a href="/2020/12/26/git-cheat-sheet/">git-cheat-sheet</a></p><p class="categories"><a href="/categories/notes/">notes</a> / <a href="/categories/notes/cheatsheet/">cheatsheet</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-10-25T06:06:30.000Z">2020-10-25</time></p><p class="title"><a href="/2020/10/25/Markdown-notes/">Markdown notes</a></p><p class="categories"><a href="/categories/Markdown/">Markdown</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-10-24T16:38:16.000Z">2020-10-24</time></p><p class="title"><a href="/2020/10/24/C-midterm-review/">C++ midterm review</a></p><p class="categories"><a href="/categories/tech/">tech</a> / <a href="/categories/tech/c/">c++</a> / <a href="/categories/tech/c/midterm/">midterm</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Database/SQL/"><span class="level-start"><span class="level-item">SQL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Database/SQL/MySQL/"><span class="level-start"><span class="level-item">MySQL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/hexo-theme/"><span class="level-start"><span class="level-item">hexo-theme</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/notes/"><span class="level-start"><span class="level-item">notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/notes/cheatsheet/"><span class="level-start"><span class="level-item">cheatsheet</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/python/spider/"><span class="level-start"><span class="level-item">spider</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/python/spider/funny/"><span class="level-start"><span class="level-item">funny</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">January 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Crawl/"><span class="tag">Crawl</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Theme/"><span class="tag">Hexo-Theme</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL/"><span class="tag">SQL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Spider/"><span class="tag">Spider</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cheatsheet/"><span class="tag">cheatsheet</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo-theme/"><span class="tag">hexo-theme</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/bai-logo2.png" alt="BestBonBai" height="28"></a><p class="size-small"><span>&copy; 2021 BestBonBai</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© Copyright for All articles with <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">free share licence</a><br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2020/12/30 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv"></span></strong> users <strong><span id="busuanzi_value_site_pv"></span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('351d88f9c2ba76a62b8e','0393ece8e2726639cd3aba30c379297c758ad525','BestBonBai','BestBonBai.github.io',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('351d88f9c2ba76a62b8e','0393ece8e2726639cd3aba30c379297c758ad525','BestBonBai','BestBonBai.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/model1.model.json"},"display":{"position":"right","width":190,"height":280},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body></html>
