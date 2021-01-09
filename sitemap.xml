@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bestbonbai.github.io/self-talking/index.html</loc>
+    <loc>https://bestbonbai.github.io/2021/01/09/test-secret-page/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/2020/10/25/Markdown-notes/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/2020/12/26/git-cheat-sheet/</loc>
     
     <lastmod>2021-01-09</lastmod>
     
@@ -10,6 +24,20 @@
   
   <url>
     <loc>https://bestbonbai.github.io/2021/01/02/Python-Spider-to-Crawl-PangziTV/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/2020/10/24/C-midterm-review/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/self-talking/index.html</loc>
     
     <lastmod>2021-01-09</lastmod>
     
@@ -65,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/2020/10/24/C-midterm-review/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.github.io/2020/10/21/Hexo-Theme/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/2020/12/26/git-cheat-sheet/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -94,13 +108,6 @@
   
   <url>
     <loc>https://bestbonbai.github.io/2020/10/21/How-to-create-Hexo/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/2020/10/25/Markdown-notes/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -158,6 +165,13 @@
   </url>
   
   <url>
+    <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.github.io/tags/Python/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -179,13 +193,6 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.github.io/tags/git/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -194,6 +201,13 @@
   
   <url>
     <loc>https://bestbonbai.github.io/tags/cheatsheet/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/tags/secret/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -223,7 +237,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/python/</loc>
+    <loc>https://bestbonbai.github.io/categories/Markdown/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -237,28 +251,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/Markdown/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/categories/notes/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/categories/hexo-theme/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/categories/python/spider/</loc>
+    <loc>https://bestbonbai.github.io/categories/python/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -272,7 +265,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/notes/cheatsheet/</loc>
+    <loc>https://bestbonbai.github.io/categories/python/spider/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,7 +279,35 @@
   </url>
   
   <url>
+    <loc>https://bestbonbai.github.io/categories/notes/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/secret/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/hexo-theme/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.github.io/categories/tech/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/notes/cheatsheet/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
