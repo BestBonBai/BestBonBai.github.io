@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bestbonbai.github.io/self-talking/index.html</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.github.io/2021/01/08/use-hexo-theme-icarus/</loc>
     
     <lastmod>2021-01-09</lastmod>
@@ -31,13 +38,6 @@
   
   <url>
     <loc>https://bestbonbai.github.io/love-ppt/love-story.html</loc>
-    
-    <lastmod>2021-01-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.github.io/self-talking/index.html</loc>
     
     <lastmod>2021-01-09</lastmod>
     
@@ -165,13 +165,6 @@
 
   
   <url>
-    <loc>https://bestbonbai.github.io/tags/Hexo-Theme/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.github.io/tags/Database/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -186,14 +179,21 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
+    <loc>https://bestbonbai.github.io/tags/Hexo-Theme/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/tags/hexo-theme/</loc>
+    <loc>https://bestbonbai.github.io/tags/Hexo/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/tags/Markdown/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -235,7 +235,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/tags/Hexo/</loc>
+    <loc>https://bestbonbai.github.io/tags/hexo-theme/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -265,13 +265,6 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/hexo-theme/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.github.io/categories/Database/SQL/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -293,7 +286,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/tech/</loc>
+    <loc>https://bestbonbai.github.io/categories/hexo-theme/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,14 +314,21 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/tech/c/</loc>
+    <loc>https://bestbonbai.github.io/categories/python/spider/funny/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bestbonbai.github.io/categories/python/spider/funny/</loc>
+    <loc>https://bestbonbai.github.io/categories/tech/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.github.io/categories/tech/c/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
