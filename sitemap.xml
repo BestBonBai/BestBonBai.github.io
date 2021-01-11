@@ -193,13 +193,6 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/Markdown/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.me/tags/Python/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
@@ -215,6 +208,13 @@
   
   <url>
     <loc>https://bestbonbai.me/tags/Crawl/</loc>
+    <lastmod>2021-01-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.me/tags/Markdown/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,7 +258,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/Markdown/</loc>
+    <loc>https://bestbonbai.me/categories/python/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/python/</loc>
+    <loc>https://bestbonbai.me/categories/Markdown/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,7 +286,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
+    <loc>https://bestbonbai.me/categories/python/spider/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -294,13 +294,6 @@
   
   <url>
     <loc>https://bestbonbai.me/categories/Database/SQL/MySQL/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/python/spider/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -315,6 +308,13 @@
   
   <url>
     <loc>https://bestbonbai.me/categories/python/spider/funny/</loc>
+    <lastmod>2021-01-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
