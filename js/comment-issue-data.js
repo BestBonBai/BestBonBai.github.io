@@ -59,8 +59,9 @@ function fillComments(result, authorizationToken) {
     $.each(result, function (i, item) {
         var contentStr = item.body.trim();
         var isSubStr = true;
-        contentStr = contentStr.replace(" ", "");
-        contentStr = contentStr.replace("&nbsp;", "");
+        // bestbonbai 修改了这里
+        // contentStr = contentStr.replace(" ", "");
+        // contentStr = contentStr.replace("&nbsp;", "");
         // 第一次进来就有空格的情况
         let splitStr = "\n\n";
         let firstComm = contentStr.indexOf(">") > -1;
