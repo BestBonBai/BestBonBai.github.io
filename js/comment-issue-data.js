@@ -127,7 +127,7 @@ function addCommentInfo(result, resultArr, item, endIndex, i, contentStr) {
     // 放入
     let userName = item["user"].login;
     if (userName != undefined && userName != '' && userName == ADMIN_NAME) {
-        userName += '[blogger]';
+        userName += '[owner]';
     }
     resultArr.push({
         "content": contentStr,
@@ -179,7 +179,7 @@ function renderCommentData(COMMENT_ARR) {
             var contentStr = item.content;
             htmlContentWidget +=
                 "<div class='card-comment-item'>" + "<a href=\"" + item.userUrl + "\"target=\"_blank\">" + "<img class='ava' src='" + item.userAvatar + "'/></a>" +
-                "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;commented " + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
+                "<div class='item-header-text'><a href='" + item.userUrl + "'target='_blank'>" + item.userName + "</a>&nbsp;said " + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
                 "</div>";
         }
         htmlContentWidget += "</div>"
@@ -230,7 +230,7 @@ function renderValineComment(valine, ADMIN_NAME) {
             for (var i = 0; i < comments.length; i++) {
                 var nick = comments[i]._serverData.nick;
                 if (nick == ADMIN_NAME) {
-                    nick += '[blogger]';
+                    nick += '[owner]';
                 }
                 var content = comments[i]._serverData.comment;
                 var url = comments[i]._serverData.url;
@@ -332,7 +332,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
             }
         }
         // console.clear();
-        console.log("~~~~Welcome BestBonBai's Studio，https://BestBonBai.github.io/ ~~~~")
+        console.log("~~~~Welcome BestBonBai's Studio ~~~~")
     }
         ,
         500
