@@ -193,14 +193,7 @@
 
   
   <url>
-    <loc>https://bestbonbai.me/tags/MATH/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/tags/Maple/</loc>
+    <loc>https://bestbonbai.me/tags/C/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -214,14 +207,14 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/ENGR/</loc>
+    <loc>https://bestbonbai.me/tags/MATH/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/C/</loc>
+    <loc>https://bestbonbai.me/tags/Maple/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -242,6 +235,13 @@
   </url>
   
   <url>
+    <loc>https://bestbonbai.me/tags/ENGR/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.me/tags/Hexo-Theme/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
@@ -249,14 +249,14 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/Markdown/</loc>
+    <loc>https://bestbonbai.me/tags/Hexo/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/Hexo/</loc>
+    <loc>https://bestbonbai.me/tags/Markdown/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -284,13 +284,6 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/tags/hexo-theme/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bestbonbai.me/tags/SOEN/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
@@ -311,10 +304,17 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://bestbonbai.me/tags/hexo-theme/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://bestbonbai.me/categories/MATH/</loc>
+    <loc>https://bestbonbai.me/categories/tech/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -328,14 +328,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/tech/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/MATH/Maple/</loc>
+    <loc>https://bestbonbai.me/categories/MATH/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -349,7 +342,21 @@
   </url>
   
   <url>
+    <loc>https://bestbonbai.me/categories/tech/c/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.me/categories/Data-Communication/Computer-Networks/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.me/categories/MATH/Maple/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -363,14 +370,14 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/MATH/ENGR/</loc>
+    <loc>https://bestbonbai.me/categories/python/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/tech/c/</loc>
+    <loc>https://bestbonbai.me/categories/SOEN/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -391,28 +398,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/Database/SQL/MySQL/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/python/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/SOEN/</loc>
+    <loc>https://bestbonbai.me/categories/MATH/ENGR/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -426,7 +412,7 @@
   </url>
   
   <url>
-    <loc>https://bestbonbai.me/categories/notes/</loc>
+    <loc>https://bestbonbai.me/categories/Database/SQL/MySQL/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -434,6 +420,20 @@
   
   <url>
     <loc>https://bestbonbai.me/categories/python/spider/funny/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.me/categories/notes/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
