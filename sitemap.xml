@@ -405,6 +405,13 @@
   </url>
   
   <url>
+    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
+    <lastmod>2021-09-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestbonbai.me/categories/MATH/ENGR/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
@@ -434,13 +441,6 @@
   
   <url>
     <loc>https://bestbonbai.me/categories/python/spider/funny/</loc>
-    <lastmod>2021-09-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestbonbai.me/categories/hexo-theme/</loc>
     <lastmod>2021-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
